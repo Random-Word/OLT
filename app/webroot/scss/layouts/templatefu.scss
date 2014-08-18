@@ -1,0 +1,36 @@
+#templatefu {
+    font-family: Consolas, "courier new", courier, monospaced;
+    font-size:rem-calc(13px);
+    border-left: 1px solid $grey-3;
+    border-right: 1px solid $grey-3;
+  .template-tools {
+    ul { margin:rem-calc(5px) 0 0 0;}
+    & ul li .button {
+      margin:0;
+      padding:rem-calc(6px) rem-calc(12px);
+    }
+  }
+  .template-margin {
+    background-color: $grey-9;
+    color:$grey-2;
+  }
+  .template-row.alt-row { background-color:lighten($grey-2, 2%);}
+  .template-margin.alt-row { background-color:lighten($grey-9, 2%);}
+  .template-row {
+    div {display:inline-block;}
+    background-color: $grey-2;
+    height: rem-calc(36px); // button height + 5px on top & bottom
+    line-height: rem-calc(36px);
+    .key.editable { color:$primary-color;}
+    .key.static {color:$grey-8;}
+    .val { color:$grey-8;}
+    .array-key-count { color:$success-color; padding-left:rem-calc(12px);}
+    .array-key-count.empty { color:$alert-color; padding-left:rem-calc(12px);}
+    .indented {
+      display:inline-block;
+      border-right:1px dotted $grey-3;
+      margin-right:rem-calc(5px);
+      padding-left:rem-calc(20px);
+    }
+  }
+}

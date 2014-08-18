@@ -1,0 +1,804 @@
+{
+	"title": "Ethogram",
+	"config": {
+		"interval_value": 10
+	},
+	"params": {
+		"research_subject": {
+			"data": {
+				"type": "list",
+				"options": {
+					"cats": {
+						"value": "cats",
+						"string": "Cats",
+						"example_string": "Cat paws at the floor slightly while smelling the air.",
+						"operational_definitions": [
+							{
+								"label": "Rearing",
+								"description": "Cat goes up on hind legs in attempt to get food"
+							},
+							{
+								"label":"Searching",
+								"description": "Cat (either) looks away from food then back up at it"
+								},
+							{
+								"label": "Tail flicking",
+								"description": "Cat flicks its tail back and forth"
+							},
+							{
+								"label": "Jumping",
+								"description": "The cat jumps on counter and gets pushed off"
+							},
+							{
+								"label": "Affection",
+								"description": "The cat rubs body against person's leg"
+							},
+							{
+								"label": "Attacking",
+								"description": "The cat bites string on journal"
+							},
+							{
+								"label": "Grooming",
+								"description": "The cat licks person's head"
+							},
+							{
+								"label": "Avoidance",
+								"description": "The person shifts away from cat"
+							}
+						]
+					},
+					"students_shopping": {
+						"value": "students_shopping",
+						"string": "Student Shopping.",
+						"example_string": "No sound",
+						"operational_definitions": [
+						{
+							"label": "Reading Label",
+							"description": "Student takes a product off the shelf and looks at the package before putting it in cart or on shelf"
+						},
+							{
+								"label": "Product Comparing",
+								"description": "Student picks up two products and alternates looking at packaging"
+							},
+							{
+								"label": "Reading Price",
+								"description": "Student indicates she is reading a yellow label on the shelf"
+							},
+							{
+								"label": "Catching",
+								"description": "Student on right catches product thrown to her by student on left"
+							},
+							{
+								"label": "Demonstrating",
+								"description": "One student points out a product on the shelf to the other student"
+							}
+						]
+					}
+				}
+
+			},
+			"task": {},
+			"view": {
+				"option_element": {
+					"file": "button-group",
+					"params": {
+						"button_color": null,
+						"button_size": null,
+						"inline": false
+					}
+				}
+			}
+		},
+		"operationalized_behaviour": {
+			"data": {
+				"type": "field"
+			},
+			"task": {},
+			"view": {}
+		}
+	},
+	"assets": {
+		"audio": [],
+		"video": [
+			{
+				"file_base_name": "ethogram_instructions",
+				"alias": "ethogram_instructions",
+				"bind_to_param": {},
+				"bind_to_slide": "purpose_and_methods",
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 249
+				}
+			},
+			{
+				"file_base_name": "cats_1",
+				"alias": "video_1",
+				"bind_to_param": {
+					"param": "research_subject",
+					"option": "cats"
+				},
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 60
+				}
+			},
+			{
+				"file_base_name": "cats_2",
+				"alias": "video_2",
+				"bind_to_param": {
+					"param": "research_subject",
+					"option": "cats"
+				},
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 73
+				}
+			},
+			{
+				"file_base_name": "cats_3",
+				"alias": "video_3",
+				"bind_to_param": {
+					"param": "research_subject",
+					"option": "cats"
+				},
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 76
+				}
+			},
+			{
+				"file_base_name": "cats_4",
+				"alias": "video_4",
+				"bind_to_param": {
+					"param": "research_subject",
+					"option": "cats"
+				},
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 80
+				}
+			},
+			{
+				"file_base_name": "students_shopping_1",
+				"alias": "video_1",
+				"bind_to_param": {
+					"param": "research_subject",
+					"option": "students_shopping"
+				},
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 70
+				}
+			},
+			{
+				"file_base_name": "students_shopping_2",
+				"alias": "video_2",
+				"bind_to_param": {
+					"param": "research_subject",
+					"option": "students_shopping"
+				},
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 96
+				}
+			},
+			{
+				"file_base_name": "students_shopping_3",
+				"alias": "video_3",
+				"bind_to_param": {
+					"param": "research_subject",
+					"option": "students_shopping"
+				},
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 86
+				}
+			},
+			{
+				"file_base_name": "students_shopping_4",
+				"alias": "video_4",
+				"bind_to_param": {
+					"param": "research_subject",
+					"option": "students_shopping"
+				},
+				"file_formats": ["mp4","webm"],
+				"properties": {
+					"duration": 86
+				}
+			}
+		],
+		"image": [],
+		"file": []
+	},
+	"toc": [
+		"chapter_2",
+		"measuring_behaviour",
+		"purpose_and_methods",
+		"choose_subject",
+		"describing_behaviour",
+		"creating_ethograms",
+		"behaviour_1",
+		"behaviour_2",
+		"behaviour_3",
+		"operational_definitions",
+		"operationalized_ethogram",
+		"post_activity"
+	],
+	"slides": {
+		"chapter_2": {
+			"name": "chapter_2",
+			"title": "Chapter 2",
+			"subtitle": "Conducting Research in Psychology",
+			"source": "toc",
+			"text": {
+				"instructions": null
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0,
+					"total": 8
+				}
+			},
+			"content_sections": ["research_methods_in_psychology"],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": []
+			},
+			"params": {
+				"global": [],
+				"local": {}
+			},
+			"assets": {
+				"video": [],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"measuring_behaviour": {
+			"name": "measuring_behaviour",
+			"title": "Measuring Behaviour Using Ethograms",
+			"source": "toc",
+			"subtitle": null,
+			"text": {
+				"instructions": null
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0,
+					"total": 8
+				}
+			},
+			"content_sections": ["definition_of_an_ethogram"],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": []
+			},
+			"params": {
+				"global": [],
+				"local": {}
+			},
+			"assets": {
+				"video": [],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"purpose_and_methods": {
+			"name": "purpose_and_methods",
+			"title": "Ethogram Instructions",
+			"subtitle": "Lab Purpose & Methods",
+			"source": "toc",
+			"text": {
+				"instructions": null
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0,
+					"total": 8
+				}
+			},
+			"content_sections": [
+				"ethogram_instruction_video"
+			],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": []
+			},
+			"params": {
+				"global": [],
+				"local": {}
+			},
+			"assets": {
+				"video": ["ethogram_instructions"],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"choose_subject": {
+			"name": "choose_subject",
+			"title": "Choose a Subject",
+			"subtitle": null,
+			"source": "toc",
+			"text": {
+				"instructions": "<p>Pick a category of video that interests you. Based on the operational definitions provided, fill out the tables to create ethograms of behaviour.<br />Note how the ethograms split the videos into set time intervals. Keep a tally of the number of times each behaviour occurs within the indicated interval</p><p class='warning'>You may choose a different subject at any time, however answers from your previous subject will not be saved.</p>"
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0,
+					"total": 8
+				}
+			},
+			"content_sections": [],
+			"fields": {
+				"global": [
+					{
+						"name": "research_subject",
+						"section": true,
+						"value": false,
+						"required_to_advance": true
+					}
+				],
+				"local": [],
+				"response": []
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": false
+					}
+				},
+				"local": {}
+			},
+			"assets": {
+				"video": [],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+
+		},
+		"describing_behaviour": {
+			"name": "describing_behaviour",
+			"title": "Describing Behaviour",
+			"subtitle": null,
+			"source": "toc",
+			"text": {
+				"instructions": "<p>For this part, you will use <em>ad libitum</em> (or &quot;at liberty&quot;) sampling to describe what you see in the video. This type of recording is also called <em>casual sampling</em> or <em>casual observation</em>, with the researcher making free-form notes about whatever seems interesting.</p>"
+			},
+			"infobar": {
+				"tasks": 1,
+				"value": {
+					"slide": 1,
+					"total": 8
+				}
+			},
+			"content_sections": [],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": [
+					{
+						"name": "behaviour_description",
+						"section": true,
+						"value": {
+							"response": 1,
+							"total": 8
+						},
+						"required_to_advance": false
+					}
+				]
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": true
+					}
+				},
+				"local": {}
+			},
+			"assets": {
+				"video": ["video_1"],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"creating_ethograms": {
+			"name": "creating_ethograms",
+			"title": "Creating Ethograms",
+			"subtitle": null,
+			"source": "toc",
+			"text": {
+				"instructions": null
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0,
+					"total": 8
+				}
+			},
+			"content_sections": ["creating_ethograms", "your_research_subject"],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": []
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": true
+					}
+				},
+				"local": {}
+			},
+			"assets": {
+				"video": [],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"behaviour_1": {
+			"name": "behaviour_1",
+			"title": "Behaviour Videos",
+			"subtitle": "1 of 3",
+			"source": "toc",
+			"text": {
+				"instructions": "<p>Start the video by pressing the <kbd>Play</kbd> button. Each time <kbd>Play</kbd> is clicked, the video will continue for <strong>10 seconds</strong>. After each ten-second interval your tally will automatically be written to your ethogram but your work is <em>not</em> automatically saved. If you reload or close your browser before pressing 'save', you will need to redo this slide.</p><p>In the menu below you will find a list of possible behaviours, and their corresponding operational definitions, that may appear in the video shown. Your task is to watch the video and keep a tally for <span class='warning'>any 2 behaviours</span> that are <span class='warning'>actually depicted</span>. Click the <kbd>Up Arrow</kbd> whenever the behaviour occurs, and, should you make a mistake, click the <kbd>Down Arrow</kbd> to fix your tally.</p><p>After you have collected a tally for 2 operationalized behaviours click <kbd>Next</kbd> to advance the slide.</p>"
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0.33,
+					"total": 8
+				}
+			},
+			"content_sections": [],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": [
+					{
+						"name": "behaviour_counting_1",
+						"section": true,
+						"value": {
+							"response": 0.33,
+							"total": 8
+						},
+						"required_to_load": true
+					}
+				]
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": true
+					}
+				},
+				"local": {}
+			},
+			"assets": {
+				"video": ["video_1"],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"behaviour_2": {
+			"name": "behaviour_2",
+			"title": "Behaviour Videos",
+			"subtitle": "2 of 3",
+			"source": "toc",
+			"text": {
+				"instructions": "<p>Start the video by pressing the <kbd>Play</kbd> button. Each time <kbd>Play</kbd> is clicked, the video will continue for <strong>10 seconds</strong>. After each ten-second interval your tally will automatically be written to your ethogram but your work is <em>not</em> automatically saved. If you reload or close your browser before pressing 'save', you will need to redo this slide.</p><p>In the menu below you will find a list of possible behaviours, and their corresponding operational definitions, that may appear in the video shown. Your task is to watch the video and keep a tally for <span class='warning'>any 2 behaviours</span> that are <span class='warning'>actually depicted</span>. Click the <kbd>Up Arrow</kbd> whenever the behaviour occurs, and, should you make a mistake, click the <kbd>Down Arrow</kbd> to fix your tally.</p><p>After you have collected a tally for 2 operationalized behaviours click <kbd>Next</kbd> to advance the slide.</p>"
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0.33,
+					"total": 8
+				}
+			},
+			"content_sections": [],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": [
+					{
+						"name": "behaviour_counting_2",
+						"section": true,
+						"value": {
+							"response": 0.33,
+							"total": 8
+						},
+						"required_to_load": true
+					}
+				]
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": true
+					}
+				},
+				"local": []
+			},
+			"assets": {
+				"video": ["video_2"],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"behaviour_3": {
+			"name": "behaviour_3",
+			"title": "Behaviour Videos",
+			"subtitle": "3 of 3",
+			"source": "toc",
+			"text": {
+				"instructions": "<p>Start the video by pressing the <kbd>Play</kbd> button. Each time <kbd>Play</kbd> is clicked, the video will continue for <strong>10 seconds</strong>. After each ten-second interval your tally will automatically be written to your ethogram but your work is <em>not</em> automatically saved. If you reload or close your browser before pressing 'save', you will need to redo this slide.</p><p>In the menu below you will find a list of possible behaviours, and their corresponding operational definitions, that may appear in the video shown. Your task is to watch the video and keep a tally for <span class='warning'>any 2 behaviours</span> that are <span class='warning'>actually depicted</span>. Click the <kbd>Up Arrow</kbd> whenever the behaviour occurs, and, should you make a mistake, click the <kbd>Down Arrow</kbd> to fix your tally.</p><p>After you have collected a tally for 2 operationalized behaviours click <kbd>Next</kbd> to advance the slide.</p>"
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0.33,
+					"total": 8
+				}
+			},
+			"content_sections": [],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": [
+					{
+						"name": "behaviour_counting_3",
+						"section": true,
+						"value": {
+							"response": 0.33,
+							"total": 8
+						},
+						"required_to_load": true
+					}
+				]
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": true
+					}
+				},
+				"local": {}
+			},
+			"assets": {
+				"video": ["video_3"],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"operational_definitions": {
+			"name": "operational_definitions",
+			"title": "Operationalizing Behaviour",
+			"subtitle": null,
+			"source": "toc",
+			"text": {
+				"instructions": "<p>Watch the video below, observing behaviours other than those you have been counting on previous slides. Choose one to operationalize.</p><p>Remember that an operational definition is a description that turns something abstract, such as behaviour, into something that is both observable and measureable.</p>"
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 2,
+					"total": 8
+				}
+			},
+			"content_sections": [],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": [
+					{
+						"name": "create_an_operational_definition",
+						"section": true,
+						"value": {
+							"response": 2,
+							"total": 8
+						},
+						"required_to_advance": true
+					}
+				]
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": true
+					},
+					"local": [],
+					"response": {}
+				}
+			},
+			"assets": {
+				"video": ["video_4"],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"operationalized_ethogram": {
+			"name": "operationalized_ethogram",
+			"title": "Creating an Ethogram",
+			"subtitle": "Your Own Operational Definition",
+			"source": "toc",
+			"text": {
+				"instructions": "<p>For this final part of this activity, you will use the operational definition you just created to create an ethogram of behaviour.</p>"
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 1,
+					"total": 8
+				}
+			},
+			"content_sections": [],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": [
+					{
+						"name": "operationalized_behaviour_counting",
+						"section": true,
+						"value": {
+							"response": 1,
+							"total": 8
+						},
+						"required_to_advance": true
+					}
+				]
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": true
+					}
+				},
+				"local": [],
+				"rset": {
+					"operational_definition": {
+						"source": "operational_definitions.operational_definition",
+						"required_to_load": true
+					}
+				}
+			},
+			"assets": {
+				"video": ["video_4"],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"post_activity": {
+			"name": "post_activity",
+			"title": "Post-Activity Questions",
+			"subtitle": null,
+			"source": "toc",
+			"text": {
+				"instructions": null
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 3,
+					"total": 8
+				}
+			},
+			"content_sections": ["submit your lab"],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": [
+					{
+						"name": "research_design",
+						"section": true,
+						"value": {
+							"response": 1,
+							"total": 8
+						},
+						"required_to_advance": true
+					},
+					{
+						"name": "research_design_reflection",
+						"section": true,
+						"value": {
+							"response": 1,
+							"total": 8
+						},
+						"required_to_advance": true
+					},
+					{
+						"name": "operational_definitions_knowledge",
+						"section": true,
+						"value": {
+							"response": 1,
+							"total": 8
+						},
+						"required_to_advance": true
+					}
+				]
+			},
+			"params": {
+				"global": {
+					"research_subject": {
+						"required_to_load": true
+					}
+				},
+				"local": {}
+			},
+			"assets": {
+				"video": [],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		}
+	},
+	"rset": {
+		"params":{
+			"research_subject":null,
+			"operationalized_behaviour": {
+				"label":null,
+				"description":null
+			}
+		},
+		"response":{
+			"describing_behaviour": {
+				"behaviour_description": null
+			},
+			"behaviour_1": {
+				"behaviour_counting": {}
+			},
+			"behaviour_2": {
+				"behaviour_counting": {}
+			},
+			"behaviour_3": {
+				"behaviour_counting": {}
+			},
+			"operational_definitions":{
+				"create_an_operational_definition": {
+					"name":null,
+					"description":null
+				}
+			},
+			"operationalized_ethogram":{
+				"operationalized_behaviour_counting": {}
+			},
+			"post_activity":{
+				"research_design": null,
+				"research_design_reflection":null,
+				"operational_definitions_knowledge":null
+			}
+		}
+	}
+
+}

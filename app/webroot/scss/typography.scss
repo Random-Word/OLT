@@ -1,0 +1,163 @@
+// This doesn't belong in palette because the colors are paired with an element, ie. they've become styles
+$header-anchor-color:$grey-4;
+$header-anchor-color-hover:$secondary-color;
+$header-anchor-color-active:$grey-6;
+$header-anchor-color-disabled:$grey-6;
+
+.h1-sized {
+  font-size:$h1-font-size;
+  .diminished { font-size:$h1-font-size * $diminished-text-scale-factor; }
+}
+.h2-sized {
+  font-size:$h2-font-size;
+  .diminished { font-size:$h2-font-size * $diminished-text-scale-factor; }
+}
+.h3-sized {
+  font-size:$h3-font-size;
+  .diminished { font-size:$h3-font-size * $diminished-text-scale-factor; }
+}
+.h4-sized {
+  font-size:$h4-font-size;
+  .diminished { font-size:$h4-font-size * $diminished-text-scale-factor; }
+}
+.h5-sized {
+  font-size:$h5-font-size;
+  .diminished { font-size:$h5-font-size * $diminished-text-scale-factor; }
+}
+.diminished { font-size:smaller; }
+.emphatic {
+  font-weight:bold;
+  // considering expanding this class, it's not just a synonym for a strong tag, promise. ;)
+  // maybe a context-sensitive waterfall for what emphastic means, ie. itals in some places, big padding in other, etc.
+}
+.monospaced {
+ font-family: "Consolas", "Droid Sans Mono";
+}
+.warning { color: $warning-color !important; }
+.emphatic.success.label {
+  color: $white !important;
+  border-radius:999px;
+  @include pad("txb");
+}
+.olt-heading {
+  a {
+      color: $header-anchor-color;
+      transition: color 0.3s ease-out;
+      &:hover { color:$header-anchor-color-hover; }
+      &:active { color:$header-anchor-color-active; }
+    }
+  .expander {
+    transition: color 1s ease-out;
+    &:hover {
+      span.note-text {
+        color:$white;
+      }
+    }
+  }
+}
+
+div.masthead {
+  vertical-align:baseline;
+  margin:inherit;
+  h1,h2,h3,h4,h5 {display:inline-block}
+  h1.masthead.xlg {
+    margin:(rem-calc($topbar-height) - $h2-font-size)/2 rem-calc(5px) 0 0;
+    padding: 0 rem-calc(10px) 0 0;
+    line-height:$h2-line-height;
+    font-size:$h2-font-size;
+    font-family: "Oswald", sans-serif;
+    font-weight:300 !important;
+    color:white;
+    text-transform: uppercase;
+    border-right:1px solid white;
+  }
+    .subheader {
+      vertical-align:top;
+      padding:rem-calc(5px) rem-calc(8px);
+      margin: (rem-calc($topbar-height) - ($h2-font-size + rem-calc(2.5px))) 0 0 0; // top-margin = difference in h1/h2 height + sum of padding + border
+      line-height: $h4-line-height;
+      text-transform: lowercase;
+      border-top:1px dotted $grey-6;
+      border-bottom:1px dotted $grey-6;
+      color: $secondary-color;
+    }
+}
+
+.label.info {
+  background-color: $grey-2;
+}
+
+.right-off-canvas-menu {
+
+  ul.pagevar.menu {
+    a, h1,h2,h3,h4,h5, p, span, li {
+      transition: color 0.3s ease-out;
+    }
+    li {
+      border-bottom: 1px dotted $grey-8;
+      a {
+        color:$white;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+      &.active a {
+        color: $success-color;
+      };
+    }
+  }
+}
+
+h1.slide-title {
+  position:relative;
+  z-index:100;
+  border-bottom:1px solid $grey-2;
+  margin: 10% 0 rem-calc($base-pad-size-scalar) 0;
+  font-size:4rem;
+  //border: 1px solid lighten($slide-title-background-color, 10%);
+  padding:2rem;
+  span.subheader {
+    font-size: 2.5rem;
+    padding:1rem 2rem;
+    border-radius:999px;
+    background-color: $white;
+    &.slide-title {
+      color: $slide-title-background-color !important;
+    }
+
+    &.slide-instructions {
+      color: $slide-instructions-background-color !important;
+    }
+
+  }
+
+  div.slide-points {
+  }
+}
+#slides-completed {
+  color:$white;
+}
+.fine-print {
+  @include pad("t");
+  color:white;
+  font-size:rem-calc(12px);
+  text-align:center;
+}
+
+section.slide-section {
+  p, span, li, li li, div, a, pre, dt, dd, table, label  {
+    font-size: rem-calc(1.5 * $rem-base);
+    &.small {
+      font-size: rem-calc($rem-base);
+    }
+  }
+
+}
+
+
+a.transition {
+transition:color 0.3s ease-out;
+&:hover {
+color:$secondary-color;
+}
+}

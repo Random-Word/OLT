@@ -1,0 +1,14 @@
+**NAMES**
+- everything has to be
+
+**SLIDES**
+- The 'pages' of labs are called "slides"
+	- slides always begin at 0, which by convention should be reserved for metadata (ie. a welcome screen)
+	- slide 1
+
+** TEMPLATES **
+- Reserved words necessary to ensure guaranteed keys without extra markup (ie. "name"
+
+** Params **
+ - will use CakePHP elements as a "view" for the param
+ - param elements will require 3 keys, "name" (param name), "options" (the parameter space), "config" (what 'options' usually means)

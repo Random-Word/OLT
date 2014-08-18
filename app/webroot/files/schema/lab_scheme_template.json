@@ -1,0 +1,244 @@
+{"lab_title": {
+	"nodes": {
+		"min": 1,
+		"max": 1
+	},
+	"elements": false,
+	"children": {
+		"required": false,
+		"optional": {
+			"lab_subtitle": {
+				"nodes": {
+					"min": -1,
+					"max": "1"
+				},
+				"elements": false,
+				"children": {
+					"required": false,
+					"optional": false
+				}
+			}
+		}
+	}
+}, "lab_params": {
+	"nodes": {
+		"min": -1,
+		"max": 1
+	},
+	"elements": false,
+	"children": {
+		"required": {
+			"param_name": {
+				"nodes": {
+					"min": 1,
+					"max": 1
+				},
+				"elements": false,
+				"required_children": false,
+				"optional_children": false
+			},
+			"param_options": {
+				"nodes": {
+					"min": 2,
+					"max": -1
+				},
+				"elements": false,
+				"children": {
+					"required": {
+						"opt_value": {
+							"node": {
+								"min": 1,
+								"max": 1
+							},
+							"elements": false,
+							"children": false
+						},
+						"opt_assets": {
+							"node": {
+								"min": 1,
+								"max": 1
+							},
+							"elements": false,
+							"children": {
+								"required": {
+									"video_assets": {
+										"node": {
+											"min": -1,
+											"max": -1
+										},
+										"elements": false,
+										"children": {
+											"required": {
+												"file_base_name": {
+													"node": {
+														"min": 1,
+														"max": 1
+													},
+													"elements": false,
+													"children": false
+												},
+												"file_formats": {
+													"node": {
+														"min": 1,
+														"max": 1
+													},
+													"elements": false,
+													"children": {
+														"required": {
+															"mp4": {
+																"node": {
+																	"min": 1,
+																	"max": 1
+																},
+																"elements": false,
+																"children": false
+															},
+															"ogg": {
+																"node": {
+																	"min": 1,
+																	"max": 1
+																},
+																"elements": false,
+																"children": false
+															}
+														},
+														"optional": false
+													}
+												}
+											},
+											"optional": false
+										}
+									},
+									"audio_assets": {
+										"node": {
+											"min": -1,
+											"max": -1
+										},
+										"elements": false,
+										"children": {
+											"required": {
+												"file_base_name": {
+													"node": {
+														"min": 1,
+														"max": 1
+													},
+													"elements": false,
+													"children": false
+												},
+												"file_formats": {
+													"node": {
+														"min": 1,
+														"max": 1
+													},
+													"elements": false,
+													"children": {
+														"required": {
+															"mp3": {
+																"node": {
+																	"min": 1,
+																	"max": 1
+																},
+																"elements": false,
+																"children": false
+															},
+															"wav": {
+																"node": {
+																	"min": 1,
+																	"max": 1
+																},
+																"elements": false,
+																"children": false
+															},
+															"ogg": {
+																"node": {
+																	"min": 1,
+																	"max": 1
+																},
+																"elements": false,
+																"children": false
+															}
+														},
+														"optional": false
+													}
+												}
+											},
+											"optional": false
+										}
+									},
+									"image_assets": {
+										"node": {
+											"min": -1,
+											"max": -1
+										},
+										"elements": false,
+										"children": {
+											"required": {
+												"file_base_name": {
+													"node": {
+														"min": 1,
+														"max": 1
+													},
+													"elements": false,
+													"children": false
+												},
+												"file_formats": {
+													"node": {
+														"min": 1,
+														"max": 1
+													},
+													"elements": false,
+													"children": {
+														"required": {
+															"jpg": {
+																"node": {
+																	"min": 1,
+																	"max": 1
+																},
+																"elements": false,
+																"children": false
+															},
+															"png": {
+																"node": {
+																	"min": 1,
+																	"max": 1
+																},
+																"elements": false,
+																"children": false
+															},
+															"gif": {
+																"node": {
+																	"min": 1,
+																	"max": 1
+																},
+																"elements": false,
+																"children": false
+															}
+														},
+														"optional": false
+													}
+												}
+											},
+											"optional": false
+										}
+									}
+								},
+								"optional": false
+							}
+						}
+					},
+					"optional": false
+				}
+			}
+		},
+		"optional": {
+			"task_type": {
+				"nodes": {
+					"min": -1,
+					"max": 1
+				},
+				"elements": false,
+				"children": false
+			}
+		}
+	}
+}, "slides":}

@@ -1,0 +1,227 @@
+/*    SITEWIDE    */
+@mixin panel-border-style {
+  border: 1px solid $grey-3;
+}
+
+@mixin foundation-transition($property) {
+  transition: $property 0.3s ease-out;
+}
+
+$header-background-color: $grey-9;
+
+
+/*    TYPOGRAPHY    */
+$base-pad-size-scalar: 10;      // px
+$base-font-size-scalar : 16;    // px
+$base-section-margin: 0.5rem;
+$section-margin-bottom-size-scalar: 32;  //px
+$h1-scale-factor: 2.75;         // rems
+$diminished-text-scale-factor: 0.75; // %
+
+/*    PAGE SECTIONS    */
+// HEADER
+$header-font-size: rem-calc(1.25 * $base-font-size-scalar);
+
+
+
+// FOOTER
+$footer-height:rem-calc(80px);
+$footer-padding-top:rem-calc(20px);
+
+
+
+
+/****************************
+*                           *
+*    MIXINS & FUNCTIONS     *
+*                           *
+****************************/
+
+
+/**
+* @name: strip-units method
+* @type: function
+* @desc:
+* @arg: (number) $number
+*
+* @returns number
+*/
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+
+/**
+* @name: replace-nth method
+* @type: function
+* @desc:
+* @arg: (list) $list
+* @arg: (number) $index
+* @arg: (mixed) $value
+*
+* @returns list
+*/
+@function replace-nth($list, $index, $value) {
+  $result: null;
+
+  @if type-of($index) != number {
+    @warn "$index: #{quote($index)} is not a number for `replace-nth`.";
+  }
+
+  @else if $index == 0 {
+    @warn "List index 0 must be a non-zero integer for `replace-nth`.";
+  }
+
+  @else if abs($index) > length($list) {
+    @warn "List index is #{$index} but list is only #{length($list)} item long for `replace-nth`.";
+  }
+
+  @else {
+    $result: ();
+    $index: if($index < 0, length($list) + $index + 1, $index);
+
+    @for $i from 1 through length($list) {
+      @if $i == $index {
+        $result: append($result, $value);
+      }
+
+      @else {
+        $result: append($result, nth($list, $i));
+      }
+    }
+  }
+
+  @return $result;
+}
+
+
+/**
+* @name: as-pixel-count
+* @type: function
+* @desc:
+* @arg: (number) $number
+* @arg: (number) $elastic-base
+*
+* @returns number
+*/
+@function as-pixel-count($val, $elastic-base:false) {
+  /*                  *** NOTE ***
+    This function only supports px, em & rem at the moment;
+    no metric or print units will work
+  */
+
+  $rem-calc-present: function-exists("rem-calc"); // if a Foundation project, rem-base should exist & equal 16
+
+  // get the conditions for unit conversion settled
+  @if not $elastic-base {
+    @if global-variable-exists("rem-base") {
+      $elastic-base: strip-units($rem-base);
+    }
+    @else {
+      $elastic-base: 16 // browser default
+    }
+  }
+
+  @if not unitless($elastic-base) {
+    $elastic-base: strip-units($elastic-base);
+  }
+
+  // get the units passed to $val
+  $units: false;
+  @if not unitless($val) {
+    $units: units($val);
+    @if index( ("em", "rem"), $units ) {
+      @return strip-units($val) * $elastic-base;
+    }
+  }
+  @else {
+    @return $val;
+  }
+
+}
+
+
+/**
+* @name: pad
+* @type: mixin
+* @desc:
+* @arg: (number) $size
+* @arg: (mixed) $top
+* @arg: (mixed) $right
+* @arg: (mixed) $bottom
+* @arg: (mixed) $left
+*
+* @prints padding
+*/
+@mixin pad($size, $top:false, $right: false, $bottom: false, $left: false) {
+//  @warn "Passed value of $size is:" + $size;
+  $base: $base-pad-size-scalar; // _appconfig.scss, Line 6
+  $tight: 0.5 * $base;
+  $loose: 2 * $base;
+ // @warn "$base: " + $base + ", $tight: " + $tight + ", $loose: " + $loose;
+  // note: the order of the elements of $sizeClassKeys must correspond with it's intended pair in $sizeClasses
+  $sizeClassKeys: ("t", "b", "l","lxb","bxl","txb","bxt", "lxt", "txl");
+  $sizeClasses: (
+    ($tight, $tight, $tight, $tight), // t: tight
+    ($base, $base, $base, $base),     // b: base
+    ($loose, $loose, $loose, $loose), // l: loose
+    ($loose, $base, $loose, $base),   // lxb: loose x base
+    ($base, $loose, $base, $loose),   // bxl: base x loose
+    ($tight, $base, $tight, $base),   // txb: tight x base
+    ($base, $tight, $base, $tight),   // bxt: base x tight
+    ($loose, $tight, $loose, $tight), // lxt: loose x tight
+    ($tight, $loose, $tight, $loose)  // txl: tight x loose
+  );
+
+
+  // create default values
+  $_top: 0;
+  $_right: 0;
+  $_bottom: 0;
+  $_left: 0;
+
+  @if type-of($size) == "number" {
+    $size: as-pixel-count($size);
+    $_top: $size;
+    $_right: $size;
+    $_bottom: $size;
+    $_left: $size;
+  }
+  @else {
+    $sizeClassIndex: index($sizeClassKeys, $size);
+    $sizeClass: nth($sizeClasses, $sizeClassIndex);
+    $_top: nth($sizeClass,1);
+    $_right: nth($sizeClass,2);
+    $_bottom: nth($sizeClass,3);
+    $_left: nth($sizeClass,4);
+  }
+
+  // consolidate passed & default values
+  $inspected:1;
+  $compiledValues: ($top,$_top), ($right,$_right), ($bottom, $_bottom), ($left, $_left);
+  //@warn "Before consolidation, $compiledValues was:" + $compiledValues;
+  @each $arg in $compiledValues {
+    $passed: nth($arg, 1);
+    $default: nth($arg, 2);
+    $scalar-value: false;
+    @if  $passed == false {
+      $scalar-value: $default;
+    }
+    @else {
+      @if unitless($passed) {
+        $scalar-value: $passed;
+      }
+      @else {
+        $scalar-value: as-pixel-count($passed);
+      }
+    }
+    $compiledValues: replace-nth($compiledValues, $inspected, $scalar-value);
+    $inspected: $inspected + 1;
+  }
+  $top: rem-calc(nth(nth($compiledValues,1),1));
+  $right: rem-calc(nth(nth($compiledValues,2),1));
+  $bottom: rem-calc(nth(nth($compiledValues,3),1));
+  $left: rem-calc(nth(nth($compiledValues,4),1));
+  padding: $top $right $bottom $left;
+
+}

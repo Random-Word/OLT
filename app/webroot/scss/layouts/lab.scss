@@ -1,0 +1,373 @@
+/****************************
+*                           *
+*           LABS            *
+*                           *
+****************************/
+body {
+  height           : 100%;
+  margin           : 0;
+  padding-top      : rem-calc($topbar-height);
+  background-color : $body-background-color;
+  font-family      : "Dosis";
+}
+
+ul li {
+  list-style-type : none;
+}
+
+.pointer-cursor {
+  cursor: pointer;
+}
+
+
+
+/************************************
+*                                   *
+*        FOUNDATION EXTENSIONS      *
+*                                   *
+************************************/
+div.joyride-tip-guide {
+  font-family: "Dosis";
+  font-weight:200;
+  word-spacing: normal;
+  p {
+    line-height:1.8rem;
+  }
+  margin-top:1rem;
+  h3 {
+    margin-bottom:0.5rem;
+  }
+  box-shadow:0 0 rem-calc(8px) rgba(0,0,0,.5);
+  a.joyride-next-tip {
+    background-color:$secondary-color;
+    color:$white;
+    transition:background-color 0.3s ease-out;
+    &:hover {
+      color:white;
+      background-color:darken($secondary-color, 10%);
+    }
+  }
+}
+.off-canvas-wrap.enclose {
+  @include panel-border-style;
+  aside.left-off-canvas-menu {
+    overflow-x: hidden;
+  }
+//  margin-bottom: rem-calc($section-margin-bottom-size-scalar);
+}
+
+.flex-video {
+  //  padding-bottom:0;
+}
+
+.flex-list {
+  display        : flex;
+  flex-direction : column;
+  flex-wrap      : wrap;
+  max-height     : 100px;
+}
+
+/*********************************
+*                                *
+*        DESIGN ELEMENTS         *
+*                                *
+*********************************/
+a.button.olt-save {
+  color:$primary-color;
+  background-color:$secondary-color;
+  transition: background-color 0.3s ease-out;
+  &:hover {
+    background-color:darken($secondary-color, 5%);
+  }
+  &.active {
+    background-color: $success-color;
+    &:hover {
+      background-color: darken($success-color, 5%);
+    }
+  }
+
+  &.giant-button {
+    margin: 1.5rem 0;
+  }
+
+}
+
+/****************************
+*                           *
+*        HTML5V             *
+*                           *
+****************************/
+div.html5v {
+  * {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select:none;
+  }
+  // note: .flex-video is extended in the Foundation Extensions section
+  text-align    : center;
+  border-bottom : none;
+
+  div.player-skin {
+    a, li, li li {
+      color: $primary-color;
+    }
+
+    .flex-video {
+      margin-bottom:0;
+    }
+    overflow         : hidden;
+    background-color : $grey-10;
+  }
+
+  ul.html5v-controls {
+    text-align       : center;
+    background-color : $primary-background-color;
+    li {
+      i { font-size:$h2-font-size !important;}
+
+      @include button($button-tny, rgba(0, 0, 0, 0), false, false, false, false);
+      a { color : $primary-color; }
+      transition: background-color 0.3s ease-out, color 0.3s ease-out;
+      margin : 0;
+      line-height:$h2-font-size;
+      &:hover {
+        background-color:darken($primary-background-color, 5%);
+        i {
+          color:$secondary-color;
+        }
+      }
+
+    }
+  }
+
+  ul.f-dropdown {
+    background-color:$secondary-background-color;
+    li {
+      padding:0;
+      width:100%;
+      border-bottom:1px dotted lighten($secondary-background-color, 10%);
+      a {
+        padding:0;
+      }
+    }
+  }
+
+  div.html5v-clock {
+    color: $primary-color;
+    position:absolute;
+    top: rem-calc($base-pad-size-scalar);
+    right: rem-calc($base-pad-size-scalar * 2);
+    font-size: $h4-font-size !important;
+    transition: none;
+  }
+  div.html5v-volume-controls-wrapper {
+    ul {
+      margin:0;
+      color: $primary-color;
+      position:absolute;
+      top: 0;
+      left: rem-calc($base-pad-size-scalar * 2);
+      li {
+        display:inline-block;
+        padding: 0 rem-calc($base-pad-size-scalar/2);
+        vertical-align:text-top;
+        transition: color 0.3s ease-out;
+        &:hover {
+         background-color:none;
+          color:$secondary-color;
+        }
+      }
+    }
+  }
+}
+
+.f-dropdown.full-width {
+  li {
+    width : 100%; }
+}
+
+/****************************
+*                           *
+*           RUI             *
+*                           *
+****************************/
+
+ul.olt-rui.counter {
+  margin     : 0;
+  padding    : 0;
+  box-sizing : border-box;
+  width      : 100%;
+  text-align : center;
+  li {
+    padding        : 0;
+    margin         : 0;
+    box-sizing     : border-box;
+    vertical-align : middle;
+    height         : 100%;
+    width          : 33%;
+  }
+  &.horizontal {
+    li { display : inline-block; }
+  }
+
+  .incrementer, .decrementer {
+    margin-right : auto;
+    margin-left  : auto;
+    display      : block;
+  }
+}
+
+/****************************
+*                           *
+*        PAGEHEADING        *
+*                           *
+****************************/
+.olt-heading {
+  width            : 100%;
+  height           : rem-calc($topbar-height);
+  max-height       : rem-calc($topbar-height);
+  min-height       : rem-calc($topbar-height);
+  margin           : 0;
+  line-height      : rem-calc($topbar-height);
+  background-color : $primary-background-color;
+
+  &.menu {
+    li {
+      @include pad("b");
+      display        : inline-block;
+      height         : inherit;
+      vertical-align : text-bottom;
+      line-height    : $h3-line-height;
+      border:none;
+    }
+  }
+}
+
+#page-heading {
+  padding  : 0 rem-calc(15px);
+  position : fixed;
+  z-index  : 101;
+  top      : 0;
+  left     : 0;
+  font-size:$header-font-size;
+}
+div#user-panel {
+ position:fixed;
+  top:0;
+  right:0;
+  z-index:102;
+  ul {
+    height:$topbar-height;
+    margin:0;
+    li {
+      height:inherit;
+      line-height:$topbar-height;
+      display:inline-block;
+      a {
+      @include pad("txb");
+      }
+    }
+  }
+}
+div.masthead {
+  position:fixed;
+  top:0;
+  left:0;
+  float : left;
+  z-index:102;
+  background-image:url("../img/psyo_1031_logo.header.png");
+  background-position:rem-calc($base-pad-size-scalar) 0;
+  background-size:contain;
+  background-repeat:no-repeat;
+  padding-left:rem-calc(70px);
+
+}
+
+.slide-frame {
+  background-color: $primary-background-color;
+  font-family: "Oswald", sans-serif;
+  color       : $header-anchor-color;
+  a, h1, h2, h3, h4, h5, span, p {
+    color: $header-anchor-color;
+  }
+}
+
+#topnav {
+  width       : $row-width;
+  margin      : 0 auto;
+  .top-nav-section {
+    height      : $topbar-height;
+    line-height : $topbar-height;
+    h3.pagenav {
+      color      : $header-anchor-color;
+      transition : color 0.3s ease-out;
+      &:hover { color : $white; }
+    }
+  }
+}
+
+
+h3.pagenav {
+  cursor:pointer;
+}
+
+/****************************
+*                           *
+*        FOOTER             *
+*                           *
+****************************/
+
+#footer {
+  width            : 100%;
+  height           : 100%;
+  position         : relative;
+  background-color : $secondary-background-color;
+  padding:1rem;
+}
+
+
+#sp {
+  display : block;
+  width   : 200px;
+  height  : 40px;
+}
+
+span.lab-status a {
+  background-color:$secondary-color;
+  @include foundation-transition(background-color);
+  @include pad("b");
+  &:hover {
+    background-color:darken($secondary-color, 10%);
+  }
+}
+
+section#student-portal {
+}
+div#lab-progress ul {
+li {
+  height:auto;
+  h3 {
+    float:left;
+    color:white;
+    margin-top:.5rem;
+    background-image:url('../img/arrow_label.41x241.png');
+    background-repeat:no-repeat;
+    background-position:left;
+    background-size:contain;
+  }
+    a {
+      text-align:center;
+      padding: 1rem 2rem;
+      float:right;
+      font-family: "Oswald";
+      color:white !important;
+      background-color:$secondary-color;
+      transition:background-color 0.3s ease-out;
+      &:hover {
+        background-color:darken($secondary-color, 10%);
+      }
+    }
+    margin-bottom:1.3rem;
+  }
+}

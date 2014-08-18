@@ -1,0 +1,92 @@
+div#rset-data {
+  display:none;
+}
+#information-bar {
+  margin-bottom: $base-section-margin;
+  .infobox {
+    display:inline-block;
+    @include pad("txl");
+  }
+}
+
+
+section.slide-section {
+  padding: rem-calc($topbar-height) 0 1rem 0;
+  margin: 0;
+  &.colored-bg {
+    a, h1, h2, h3, h4, h5, span, p, li, li li, dt, dl, dd {
+    color:$white;
+    }
+  }
+
+}
+
+#slide-title_section, #slide-instructions_section {
+  color:$white;
+}
+
+section#slide-title_section {
+  background-color:$slide-title-background-color;
+}
+
+section#slide-instructions_section {
+  background-color: $slide-instructions-background-color;;
+}
+
+div.labtask {
+  border: 1px solid $grey-2;
+}
+
+
+div#slide-nav {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background-color:$primary-background-color;
+  li.slide-nav-anchor {
+    height:inherit;
+    @include pad("b");
+    color:$header-anchor-color;
+    transition: color 0.3s ease-out, background-color 0.3s ease-out, border 0.3s ease-out;
+    &.active {
+      color:white;
+      border-bottom: 3px solid $header-anchor-color;
+      background-color: lighten($primary-background-color, 10%);
+    }
+    &:hover {
+      color:$secondary-color;
+    }
+
+  }
+}
+
+div#flash-content-container {
+  position:absolute;
+  z-index:103;
+  width: rem-calc(600px);
+  margin:5% auto;
+  padding:rem-calc($base-pad-size-scalar);
+  background-color:$white;
+  border:1px solid $grey-3;
+  box-shadow:0px 0px 2rem rgba(0,0,0,.5);
+  a#dismiss-flash {
+    margin:0;
+  }
+}
+
+
+h1.lab-finalize-button {
+  color:$white;
+  font-size:$h1-font-size;
+  font-family: "Oswald", "Dosis", sans-serif;
+  padding:2rem;
+  background-color: $success-color;
+  transition:background-color 0.3s ease-out, text-shadow 0.3s ease-out;
+  &:hover {
+    color:$white;
+    text-shadow: 0px 0px 1rem $white;
+    background-color:darken($success-color, 20%);
+  }
+}
+

@@ -1,0 +1,130 @@
+{
+	"html5vControls": {
+		"shared_keys": [
+			{
+				"key": "action",
+				"type": "string",
+				"required": true,
+				"values": ["play", "playFor", "pause", "stop", "jumpTo", "jumpBy", "refresh", "next", "previous"]
+			},
+			{
+				"key": "string",
+				"type": "string",
+				"required": true,
+				"values": true
+			},
+			{
+				"key": "options",
+				"type": "array",
+				"required": true,
+				"values": false
+			}
+		],
+		"controls":{
+			"play": {
+				"additional_keys": [],
+				"options": []
+			},
+			"playFor": {
+				"additional_keys": [],
+				"options": [
+					{
+						"key":"interval",
+						"type":"integer",
+						"required":true,
+						"values":true
+					}
+				]
+			},
+			"pause": {
+				"additional_keys": [],
+				"options": []
+			},
+			"stop": {
+				"additional_keys": [],
+				"options": []
+			},
+			"jumpList": {
+				"additional_keys": [],
+				"options": [
+					{
+						"key":"autoplay",
+						"type":"boolean",
+						"required": true,
+						"values":[true, false]
+					},
+					{
+						"key":"implicit",
+						"type":"boolean",
+						"required": true,
+						"values":[true, false]
+					},
+					{
+						"key":"interval",
+						"type":"integer",
+						"required": {"implicit":true},
+						"values":true
+					},
+					{
+						"key":"start",
+						"type":"integer",
+						"required": {"implicit":true},
+						"values":true
+					},
+					{
+						"key":"stop",
+						"type":"integer",
+						"required": {"implicit":true},
+						"values":true
+					},
+					{
+						"key":"label",
+						"type":"string/regex",
+						"required": {"implicit":true},
+						"values":true
+					},
+					{
+						"key":"toc",
+						"type":"array/*",
+						"required": {"implicit":false},
+						"values":{ "type":"array/2" }
+					}
+				]
+			},
+			"jumpTo": {
+				"additional_keys": [],
+				"options": [
+					{
+						"key":"playhead",
+						"type":"integer",
+						"required":true,
+						"values":true
+					}
+				]
+			},
+			"jumpBy": {
+				"additional_keys": [],
+				"options": [
+					{
+						"key":"interval",
+						"type":"integer",
+						"required":true,
+						"values":true
+					}
+				]
+			},
+			"refresh": {
+				"additional_keys": [],
+				"options": []
+			},
+			"next": {
+				"additional_keys": [],
+				"options": []
+			},
+			"previous": {
+				"additional_keys": [],
+				"options": []
+			}
+		}
+	}
+}

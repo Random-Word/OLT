@@ -1,0 +1,37 @@
+{
+	"params":{
+		"research_subject":null,
+		"operationalized_behaviour": {
+			"label":null,
+			"description":null
+		}
+	},
+	"response":{
+		"describing_behaviour": {
+			"behaviour_description": null
+		},
+		"behaviour_1": {
+			"behaviour_counting_1": null
+		},
+		"behaviour_2": {
+			"behaviour_counting_2": {}
+		},
+		"behaviour_3": {
+			"behaviour_counting_3": {}
+		},
+		"operational_definitions":{
+			"create_an_operational_definition": {
+				"name":null,
+				"description":null
+			}
+		},
+		"operationalized_ethogram":{
+			"operationalized_behaviour_counting": {}
+		},
+		"post_activity":{
+			"research_design": null,
+			"research_design_reflection":null,
+			"operational_definitions_knowledge":null
+		}
+	}
+}

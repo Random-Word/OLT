@@ -1,0 +1,54 @@
+
+
+<div class="row">
+	<!-- LAB > NAME -->
+	<div id="template-content" class="small-12 columns">
+		<div id="lab-name" class="template-key string-key">
+			<div class="template-row indent-<?php echo $indent;?>">
+				<div class="key"><span class="static">Name</span></div>
+				<div class="val"><span class="editable"><?php echo $template['name'];?></span></div>
+			</div>
+		</div>
+
+	<!-- LAB > LAB_PARAMS -->
+		<div id="lab-params" class="template-key array-key<?php echo empty($template['lab_params']) ? " empty" : "";?>">
+		<?php
+		if (!empty($template['lab_params']) ):
+$indent++;
+				foreach ($template['lab_params'] as $param ): ?>
+<!-- LAB > LAB_PARAMS > NAME -->
+				<div class="template-row indent-<?php echo $indent;?>">
+					<div class="key"><span class="static">Name</span></div>
+					<div class="val"><span class="editable"><?php echo $param['name'];?></span></div>
+				</div>
+
+<!-- LAB > LAB_PARAMS > TASK_TYPE -->
+				<div class="template-row indent-<?php echo $indent;?>">
+					<div class="key"><span class="static">taskType</span></div>
+					<div class="val"><span class="editable select"><?php echo $task_types[$param['taskType']];?></span></div>
+				</div>
+				<div id="<?php echo $param['name'];?>_options"" class="array-key">
+
+<!-- LAB > LAB_PARAMS > OPTIONS -->
+			<?php
+$indent++;
+			foreach($param['option'] as $opt): ?>
+
+<!-- LAB > LAB_PARAMS > OPTIONS > VALUE -->
+				<div class="template-row indent-<?php echo $indent;?>">
+					<div class="key"><span class="static">Value</span></div>
+					<div class="val"><span class="editable"><?php echo $param['name'];?></span></div>
+				</div>
+
+<!-- LAB > LAB_PARAMS > OPTIONS > ASSETS -->
+				<div id="<?php echo $param['name'];?>_options_assets" class="array-key">
+			<?php
+$indent++; ?>
+					<div id="<?php echo $param['name'];?>_options_assets_video" class="array-key<?php echo empty($opt['assets']['video']) ? " empty" : "";?>">
+					<div class="template-row indent-<?php echo $indent;?>">
+						<div class="key"><span class="static">Value</span></div>
+						<div class="val"><span class="editable"><?php echo $param['name'];?></span></div>
+					</div>
+	</div>
+</div>
+<?php endforeach; endforeach; endif; }?>

@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c8c7ed7f-a75b-46f0-9ab5-a8ee2278b413" name="Default" comment="" />
+    <ignored path="app.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="app" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="vertical" split-proportion="0.5923994">
+      <split-first>
+        <splitter split-orientation="horizontal" split-proportion="0.5390476">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="lab.ctp" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/View/Layouts/lab.ctp">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="75" column="33" selection-start="3040" selection-end="3040" vertical-scroll-proportion="-17.125" vertical-offset="714" max-vertical-offset="1900">
+                      <folding>
+                        <marker date="1405309677000" expanded="true" signature="2071:2264" placeholder="..." />
+                        <marker date="1405309677000" expanded="true" signature="2109:2264" placeholder="..." />
+                        <marker date="1405309677000" expanded="true" signature="2143:2264" placeholder="..." />
+                        <marker date="1405309677000" expanded="true" signature="2321:2420" placeholder="..." />
+                        <marker date="1405309677000" expanded="true" signature="2581:2808" placeholder="..." />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="olt_tutorial.ctp" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/View/Slides/lab_002/olt_tutorial.ctp">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="87" column="0" selection-start="5512" selection-end="5512" vertical-scroll-proportion="-15.625" vertical-offset="930" max-vertical-offset="2035">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="bootstrap.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Config/bootstrap.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="79.375" vertical-offset="1905" max-vertical-offset="2737">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="core.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Config/core.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="54" column="7" selection-start="2049" selection-end="2049" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="6247">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="email.php.default" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Config/email.php.default">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2134">
+                      <folding />
+                    </state>
+                  </provider>
+                  <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+                    <state />
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Config/database.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="19" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1822">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/webroot/index.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="60" column="47" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.781893" vertical-offset="75" max-vertical-offset="3024">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="LabsController.php" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Controller/LabsController.php">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="190" column="57" selection-start="6404" selection-end="6404" vertical-scroll-proportion="-15.0" vertical-offset="2490" max-vertical-offset="6309">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="choose_subject.ctp" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/View/Slides/lab_001/choose_subject.ctp">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="48" column="22" selection-start="2535" selection-end="2535" vertical-scroll-proportion="-0.0" vertical-offset="720" max-vertical-offset="2589">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="slide_title.ctp" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/View/Elements/layout/slide_title.ctp">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="36" column="38" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="780">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="utilities.js" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/js/utilities.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="103" column="42" selection-start="2714" selection-end="2714" vertical-scroll-proportion="0.0" vertical-offset="1545" max-vertical-offset="6090">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="rset.json" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Lib/templates/rset.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="32" column="17" selection-start="622" selection-end="622" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="585">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="template.json" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Lib/templates/template.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="714" column="49" selection-start="17647" selection-end="17647" vertical-scroll-proportion="0.0" vertical-offset="10710" max-vertical-offset="12075">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="demolab.json" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/Lib/templates/demolab.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="18" column="33" selection-start="255" selection-end="267" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2199">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="OLT.js" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/js/olt/OLT.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="767" column="32" selection-start="22235" selection-end="22235" vertical-scroll-proportion="0.0" vertical-offset="11505" max-vertical-offset="23865">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="save_button.ctp" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/View/Elements/lab_ui/save_button.ctp">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="40" column="59" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="840">
+                      <folding>
+                        <marker date="1405299000000" expanded="true" signature="1200:1273" placeholder="..." />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Ticket.js" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/js/olt/Ticket.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="8" column="3" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="375">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Rset.js" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/js/olt/Rset.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="143" column="25" selection-start="3616" selection-end="3616" vertical-scroll-proportion="0.0" vertical-offset="2145" max-vertical-offset="2685">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-first>
+      <split-second>
+        <splitter split-orientation="horizontal" split-proportion="0.54">
+          <split-first>
+            <leaf>
+              <file leaf-file-name="app.scss" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/scss/app.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="254" column="0" selection-start="6280" selection-end="6280" vertical-scroll-proportion="0.0" vertical-offset="3810" max-vertical-offset="4890">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="lab.scss" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/webroot/scss/layouts/lab.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="360" column="25" selection-start="7558" selection-end="7558" vertical-scroll-proportion="0.33045357" vertical-offset="5247" max-vertical-offset="6028">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="content_elements.scss" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/scss/content_elements.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="78" column="3" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0" vertical-offset="1170" max-vertical-offset="1410">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="pallette.scss" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/scss/pallette.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="115" column="0" selection-start="3551" selection-end="3613" vertical-scroll-proportion="0.0" vertical-offset="1725" max-vertical-offset="1830">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="typography.scss" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/scss/typography.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="138" column="1" selection-start="3547" selection-end="3547" vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="2460">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="_appconfig.scss" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/scss/_appconfig.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="95" column="0" selection-start="1863" selection-end="1863" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="3420">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="_settings.scss" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/webroot/scss/_settings.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="582" column="25" selection-start="19613" selection-end="19613" vertical-scroll-proportion="0.0" vertical-offset="8730" max-vertical-offset="18750">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file leaf-file-name="arrow_label.svg" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Lib/templates/svg/arrow_label.svg">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="7" column="0" selection-start="367" selection-end="367" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="135">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="svg.json" pinned="false" current="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/Lib/svg.json">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="70" column="9" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1080">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="__testing.html" pinned="false" current="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/webroot/__testing.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state line="177" column="11" selection-start="5045" selection-end="7339" vertical-scroll-proportion="0.68237704" vertical-offset="2322" max-vertical-offset="3128">
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Config/bootstrap.php" />
+        <option value="$PROJECT_DIR$/View/Slides/lab_001/post_activity.ctp" />
+        <option value="$PROJECT_DIR$/Lib/templates/template.json" />
+        <option value="$PROJECT_DIR$/View/Elements/lab_nav.ctp" />
+        <option value="$PROJECT_DIR$/View/Layouts/lab.ctp" />
+        <option value="$PROJECT_DIR$/View/Elements/layout/slide_title.ctp" />
+        <option value="$PROJECT_DIR$/webroot/scss/_settings.scss" />
+        <option value="$PROJECT_DIR$/View/Elements/slide_nav.ctp" />
+        <option value="$PROJECT_DIR$/webroot/scss/content_elements.scss" />
+        <option value="$PROJECT_DIR$/webroot/scss/typography.scss" />
+        <option value="$PROJECT_DIR$/View/Users/home.ctp" />
+        <option value="$PROJECT_DIR$/webroot/scss/layouts/lab.scss" />
+        <option value="$PROJECT_DIR$/View/Slides/lab_002/olt_tutorial.ctp" />
+        <option value="$PROJECT_DIR$/Config/core.php" />
+        <option value="$PROJECT_DIR$/Config/database.php" />
+        <option value="$PROJECT_DIR$/webroot/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="ctp" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../scratchpad" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="FullScreen" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="PublishConfig">
+    <servers>
+      <server id="0d8c5162-5d1b-4969-b9fa-1acdc1f1f693">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="1aa2ebbe-c2e5-4374-8c55-97c044b0bfad">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+      <server id="8fb5acb5-ebf3-47d3-a267-0e48c661af2f">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </server>
+    </servers>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Lib/templates/svg" />
+      <recent name="$PROJECT_DIR$/webroot" />
+      <recent name="$PROJECT_DIR$/Lib/templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/View/Users" />
+      <recent name="$PROJECT_DIR$/View/Elements/layout" />
+      <recent name="$PROJECT_DIR$/View/Elements/design" />
+      <recent name="$PROJECT_DIR$/Lib" />
+      <recent name="$PROJECT_DIR$/webroot/js/Olt" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value="SHOW_INHERITED_FROM_OBJECT,SHOW_INHERITED,ALPHA_COMPARATOR" />
+    <option name="SHOW_TOOLBAR" value="true" />
+  </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8c7ed7f-a75b-46f0-9ab5-a8ee2278b413" name="Default" comment="" />
+      <created>1397752799661</created>
+      <updated>1397752799661</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15115353" sideWeight="0.6728763" order="2" side_tool="false" content_ui="tabs" x="747" y="259" width="566" height="1071" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975337" sideWeight="0.9938176" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16587113" sideWeight="0.6728763" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.00618238" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Lib/svg.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="9" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/__testing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="177" column="11" selection-start="5045" selection-end="7339" vertical-scroll-proportion="0.68237704" vertical-offset="2322" max-vertical-offset="3128">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="24" selection-start="126" selection-end="126" vertical-scroll-proportion="0.058670145" vertical-offset="0" max-vertical-offset="857">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Layouts/lab.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="33" selection-start="3040" selection-end="3040" vertical-scroll-proportion="-17.125" vertical-offset="714" max-vertical-offset="1900">
+          <folding>
+            <marker date="1405309677000" expanded="true" signature="2071:2264" placeholder="..." />
+            <marker date="1405309677000" expanded="true" signature="2109:2264" placeholder="..." />
+            <marker date="1405309677000" expanded="true" signature="2143:2264" placeholder="..." />
+            <marker date="1405309677000" expanded="true" signature="2321:2420" placeholder="..." />
+            <marker date="1405309677000" expanded="true" signature="2581:2808" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Slides/lab_002/olt_tutorial.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="0" selection-start="5512" selection-end="5512" vertical-scroll-proportion="-15.625" vertical-offset="930" max-vertical-offset="2035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/LabsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="57" selection-start="6404" selection-end="6404" vertical-scroll-proportion="-15.0" vertical-offset="2490" max-vertical-offset="6310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Slides/lab_001/choose_subject.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="22" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="2589">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Users/home.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="59" selection-start="1204" selection-end="1204" vertical-scroll-proportion="-5.6666665" vertical-offset="269" max-vertical-offset="1465">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/scss/layouts/lab.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="360" column="25" selection-start="7558" selection-end="7558" vertical-scroll-proportion="0.33045357" vertical-offset="5247" max-vertical-offset="6028">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="7" selection-start="2049" selection-end="2049" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="6247">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Elements/slide_nav.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="540">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/email.php.default">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2134">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller/RsetsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="13" selection-start="2797" selection-end="2797" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="4665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="642" selection-end="642" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="1822">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Config/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="79.375" vertical-offset="1905" max-vertical-offset="2737">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="47" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.781893" vertical-offset="75" max-vertical-offset="3024">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

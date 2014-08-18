@@ -1,0 +1,112 @@
+{
+	"const": {
+		"html5VLock": {
+			"until": null,
+			"since": null,
+			"all": true,
+			"forward": false,
+			"backward": false,
+			"postInterval": false,
+			"preInterval": false,
+			"withinInterval": false,
+			"release": true,
+			"secureRelease": true
+		}
+	},
+	"rUI": {
+		"css": {
+			"baseSelector": {
+				"name": ".olt-rui",
+				"desc": "Common to all response UI elements; class is 'extended' to rest of UI"
+			},
+			"field": {
+				"name": ".olt-rfield",
+				"desc": "Common to all response fields"
+			},
+			"incrementer": {
+				"name": "incrementer",
+				"desc": ""
+			}
+		},
+		"dataAttributes": {
+			"action": {
+				"name": "action",
+				"desc": ""
+			},
+			"required": {
+				"name": "required",
+				"desc": ""
+			},
+			"type": {
+				"name": "type",
+				"desc": ""
+			},
+			"olt-rfield": {
+				"name": "olt-rfield",
+				"desc": ""
+			},
+			"olt-param": {
+				"name": "olt-param",
+				"desc": ""
+			},
+			"state": {
+				"name": "state",
+				"desc": "Indicates whether the response is editable or not",
+				"values": [
+					{
+						"name": "draft",
+						"desc": "Response field is editable."
+					},
+					{
+						"name": "final",
+						"desc": "Answers saved to response field are final."
+					}
+				]
+			}
+		},
+		"globalParamOptionSelector": {
+			"name": "*[data-olt-option].olt-param.global",
+			"desc": ""
+		},
+		"navFormSelector": {
+			"name": "#LabNavForm",
+			"desc": ""
+		},
+		"navTargetSelector": {
+			"name": "#LabNavTarget",
+			"desc": ""
+		},
+		"navRequestSelector": {
+			"name": "#LabNavRequest",
+			"desc": ""
+		},
+		"navClass": {
+			"name": ".pagenav",
+			"desc": ""
+		},
+		"labFooter": {
+			"name": "#footer.labnav",
+			"desc": ""
+		},
+		"contentSelector": {
+			"name": "#content",
+			"desc": ""
+		},
+		"labHeaderSelector": {
+			"name": "#header",
+			"desc": ""
+		},
+		"html5vBaseSelector": {
+			"name": ".olt-html5v",
+			"desc": ""
+		},
+		"html5vControlSelector": {
+			"name": ".olt-html5v-control",
+			"desc": ""
+		},
+		"html5vPlayerSelector": {
+			"name": ".olt-html5v-player",
+			"desc": ""
+		}
+	}
+}

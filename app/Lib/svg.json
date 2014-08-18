@@ -1,0 +1,71 @@
+{
+	"arrowLabel":[
+		"<?xml version='1.0' encoding='utf-8'?>",
+		"<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>",
+		"<svg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 550 125'>",
+		"<polygon id='arrow-body' points='0,0 0,125 500,125 550,62.5 500,0 '>",
+		"<text id='arrow-label-content'>&nbsp;</text>",
+		"</polygon>",
+		"</svg>"]
+}
+
+
+/**
+ *
+    this is the element that would correspond with the SVG tools started above
+//<var class="olt-svg">
+//											{
+//												"source": "arrowLabel",
+//												"content":",
+//												"data": {
+//													"polygon#arrow-body": {
+//														"fill":"rgb(255,67,67)"
+//													}
+//												}
+//											}
+//										</var>
+
+
+ svg: {
+ 			init: function() {
+ 				$.each(OLT.data.svg.__list, function() {
+ 					var svg = this;
+ 					$.get(cakeUrl("assets","svg","arrow_label")).done(function(resp) {
+ 						OLT.data.svg[svg] = resp;
+ 					});
+ 				});
+ 				return OLT.fn.svg.apply();
+ 			},
+ 			apply: function() {
+
+ 				$( "var.olt-svg").each( function() {
+ 					var element = $.parseJSON($(this).html());
+ //					try {
+ //						var source = OLT.data.svg[element.source];
+ //					} catch (e) {
+ //						//todo: if the SVG isn't available, the program should prolly still run.. ?
+ //					}
+ 					var style = "<style type='text/css'><![CDATA[\n\t";
+ 					for (selector in element.data) {
+ 						var properties = element.data[selector];
+ 						style += selector + " {\n";
+ 						for (property in properties) {
+ 							style += "\t\t" + property + ": " + properties[property] + ";\n";
+ 						}
+ 						style += "}\n"
+ 					}
+ 					style += "]]></style>";
+ 					var source = "<?xml version='1.0' encoding='utf-8'?>"+
+ 							"<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>"+
+ 							"<svg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 550 125'>"+
+ 							style +
+ 							"<polygon id='arrow-body' points='0,0 0,125 500,125 550,62.5 500,0 '>"+
+ 							"<text id='arrow-label-content'>&nbsp;</text>"+
+ 							"</polygon>"+
+ 							"</svg>".replace("&nbsp;",element.text);
+ 					$(this).replaceWith(source);
+
+ 					return true;
+ 				})
+ 			}
+ 		}

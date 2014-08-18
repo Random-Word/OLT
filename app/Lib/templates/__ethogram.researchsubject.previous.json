@@ -1,0 +1,236 @@
+{
+	"research_subject": {
+			"data": {
+				"type": "list",
+				"options": {
+					"vaccumed_cats": {
+						"value": "vaccumed_cats",
+						"string": "Cat's Being Vacuumed",
+						"example_string": "Cat flicks its tail (either the whole thing or just the tip)",
+						"operational_definitions": [
+							{
+								"label": "Tail Flicking",
+								"description": "Cat flicks it's fail, either the entire thing or just the tip."
+							},
+							{
+								"label": "Paw Licking",
+								"description": "Cat licks paws or rubs them against face."
+							}
+						]
+					},
+					"elephants": {
+						"value": "elephants",
+						"string": "Elephants Playing in Water",
+						"example_string": "Elephant splashes or sprays water with trunk",
+						"operational_definitions": [
+							{
+								"label": "Trunk Spraying",
+								"description": "Elephant squirts water or sprays mist from its trunk."
+							},
+							{
+								"label": "Diving",
+								"description": "Elephant partially or completely submerges itself."
+							}
+						]
+					},
+					"birds": {
+						"value": "birds",
+						"string": "Several large birds in a yard",
+						"example_string": "Bird starts and stops with a regular frequency to crane neck",
+						"operational_definitions": [
+							{
+								"label": "Head Bobbing",
+								"description": "The bird moves head forward and back"
+							},
+							{
+								"label": "Pacing",
+								"description": "The bird walks in one direction, stops, switches directions to walk"
+							},
+							{
+								"label": "Wing Flapping",
+								"description": "One of the birds raises its wings and flaps them several times"
+							}
+						]
+					},
+					"cat_pair": {
+						"value": "cat_pair",
+						"string": "Interactions between a pair of cats",
+						"example_string": "Grey cat sniffs where black cat has just looked.",
+						"operational_definitions": [
+							{
+								"label": "Playing",
+								"description": "The grey cat bats at the black and white cat with its front or back paws"
+							},
+							{
+								"label": "Exploring",
+								"description": "The grey cat tries to open cupboard with its paw"
+							},
+							{
+								"label": "Tail Flick",
+								"description": "The black and white cat moves its tail back and forth"
+							},
+							{
+								"label": "Grooming",
+								"description": "The black and white cat licks its paws or the grey cat"
+							}
+						]
+					},
+					"cats": {
+						"value": "cats",
+						"string": "One cat interacting with its environment",
+						"example_string": "Cat paws at the floor slightly while smelling the air.",
+						"operational_definitions": [
+							{
+								"label": "Tail Flick",
+								"description": "The cat moves its tail back and forth"
+							},
+							{
+								"label": "Exploring",
+								"description": "The cat paws at the cupboard in an attempt to open it"
+							},
+							{
+								"label": "Jumping",
+								"description": "The cat jumps on counter and gets pushed off"
+							},
+							{
+								"label": "Affection",
+								"description": "The cat rubs body against person's leg"
+							},
+							{
+								"label": "Attacking",
+								"description": "The cat bites string on journal"
+							},
+							{
+								"label": "Grooming",
+								"description": "The cat licks person's head"
+							},
+							{
+								"label": "Avoidance",
+								"description": "The person shifts away from cat"
+							}
+						]
+					},
+					"dogs": {
+						"value": "dogs",
+						"string": "A dog playing in the snow",
+						"example_string": "Not a lot of repetitive/easily measured behaviour",
+						"operational_definitions": [
+							{
+								"label": "Sniffing",
+								"description": "The dog puts nose down to snow to smell"
+							},
+							{
+								"label": "Questioning",
+								"description": "The dog looks back at owner/camera"
+							},
+							{
+								"label": "Exploring",
+								"description": "The dog turns head while standing still"
+							},
+							{
+								"label": "Tracking",
+								"description": "The dog hanges direction of movement while sniffing the ground"
+							}
+						]
+					},
+					"fish": {
+						"value": "fish",
+						"string": "Fish swimming in a tank",
+						"example_string": "Humming in background",
+						"operational_definitions": [
+							{
+								"label": "Swim",
+								"description": "The fish flaps its side fins"
+							},
+							{
+								"label": "Exploring",
+								"description": "The fish changes direction of swimming"
+							}
+						]
+					},
+					"goats": {
+						"value": "goats",
+						"string": "Goat eating hay in a barn",
+						"example_string": "Fairly continuous behaviour, so might be tricky to measure using tallys",
+						"operational_definitions": [
+							{
+								"label": "Feeding",
+								"description": "Goat shifts head to a new location in order to feed on hay"
+							},
+							{
+								"label": "Pawing",
+								"description": "Goat paws at hay in order to facilitate feeding"
+							}
+						]
+					},
+					"students_cooking": {
+						"value": "students_cooking",
+						"string": "Students performing various tasks",
+						"example_string": "Student sighs unconsciously when straining.",
+						"operational_definitions": [
+							{
+								"label": "Measuring",
+								"description": "Student pours an exact amount of ingredient into a measuring cup"
+							},
+							{
+								"label": "Pouring",
+								"description": "Student pours ingredient from measuring cup into bowl"
+							},
+							{
+								"label": "Stirring",
+								"description": "Student mixes ingredients in the bowl together using a spoon; one rotation around the bowl"
+							},
+							{
+								"label": "Chopping",
+								"description": "Student cuts vegetable"
+							},
+							{
+								"label": "Note taking",
+								"description": "Student writes a chunk of text in her notebook before looking up"
+							},
+							{
+								"label": "Studying",
+								"description": "Student looks up at her computer screen"
+							},
+							{
+								"label": "Scrolling",
+								"description": "Student scrolls down page on computer"
+							},
+							{
+								"label": "Drinking",
+								"description": "Student takes a sip of water"
+							}
+						]
+					},
+					"students_shopping": {
+						"value": "student",
+						"string": "Female student grocery shopping/price compare",
+						"example_string": "No sound",
+						"operational_definitions": [
+							{
+								"label": "Reading Label",
+								"description": "Student takes a product off the shelf and looks at the package before putting it in cart or on shelf"
+							},
+							{
+								"label": "Product Comparing",
+								"description": "Student picks up two products and alternates looking at packaging"
+							},
+							{
+								"label": "Reading Price",
+								"description": "Student indicates she is reading a yellow label on the shelf"
+							},
+							{
+								"label": "Catching",
+								"description": "Student on right catches product thrown to her by student on left"
+							},
+							{
+								"label": "Demonstrating",
+								"description": "One student points out a product on the shelf to the other student"
+							}
+						]
+					}
+				}
+
+			}
+	}
+}

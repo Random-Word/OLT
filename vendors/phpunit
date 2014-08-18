@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/usr/bin/env php -d allow_url_fopen=On -d detect_unicode=Off /usr/local/Cellar/phpunit/3.7.30/libexec/phpunit-3.7.30.phar $*

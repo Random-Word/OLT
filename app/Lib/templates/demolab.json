@@ -1,0 +1,100 @@
+{
+	"title": "Demonstration",
+	"config": {
+		"interval_value": 10
+	},
+	"params": {},
+	"assets": {
+		"audio": [],
+		"video": [],
+		"image": [],
+		"file": []
+	},
+	"toc": [
+		"olt_tutorial",
+		"olt_tutorial_2"
+	],
+	"slides": {
+		"olt_tutorial": {
+			"name": "olt_tutorial",
+			"title": "Lab Interface",
+			"subtitle": "Tutorial",
+			"source": "toc",
+			"text": {
+				"instructions": "Some pages will require instructions; when this happens they'll appear in a section like this."
+			},
+			"infobar": {
+				"tasks": 0,
+				"value": {
+					"slide": 0,
+					"total": 8
+				}
+			},
+			"content_sections": ["tutorial_content_section"],
+			"fields": {
+				"global": [],
+				"local": [],
+				"response": []
+			},
+			"params": {
+				"global": [],
+				"local": {}
+			},
+			"assets": {
+				"video": [],
+				"audio": [],
+				"image": [],
+				"file": []
+			},
+			"response": {}
+		},
+		"olt_tutorial_2": {
+					"name": "olt_tutorial_2",
+					"title": "Lab Interface",
+					"subtitle": "Tutorial Pt. 2",
+					"source": "toc",
+					"text": {
+						"instructions": null
+					},
+					"infobar": {
+						"tasks": 0,
+						"value": {
+							"slide": 0,
+							"total": 8
+						}
+					},
+					"content_sections": [],
+					"fields": {
+						"global": [],
+						"local": [],
+						"response": [
+							{
+								"name": "demo_task",
+								"section": true,
+								"value": {
+									"response": 10,
+									"total": 10
+								},
+								"required_to_advance": true
+							}
+						]
+					},
+					"params": {
+						"global": [],
+						"local": {}
+					},
+					"assets": {
+						"video": [],
+						"audio": [],
+						"image": [],
+						"file": []
+					},
+					"response": {}
+				}
+	},
+	"rset": {
+		"params":{},
+		"response":{}
+	}
+
+}
