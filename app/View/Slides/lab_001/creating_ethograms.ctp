@@ -48,14 +48,15 @@ echo $this->element( "layout/slide_title", array( "header"    => $slide[ 'title'
 			<p class="note">These are operational defnitions for behaviours for your chosen research subject. Your goal
 				will be to watch for them and count them.</p>
 			<div class="olt-datasheet">
-				<dl class="h3-sized">
+				<table class="h3-sized">
 					<?php foreach ( $params_scheme[ 'research_subject' ][ 'data' ][ 'options' ][ $research_subject ][ 'operational_definitions' ] as $od ) { ?>
-					<dt class="small-2 columns descriptor"><?php echo $od['label'];?></dt
-					><dd class="small-10 columns value">
+					<tr>
+						<td class="small-3 columns"><h5 class="descriptor"><?php echo $od['label'];?></h5></td>
+						<td class="small-9 columns value">
 						<?php echo ucfirst( $od['description'] ); ?>
-					</dd>
+					</tr>
 					<?php } ?>
-				</dl>
+				</table>
 			</div>
 		</div>
 	</div>

@@ -67,6 +67,7 @@ $controls_array = array( "buttons" => array( array( "action"  => "refresh",
 							                                                                                                  "olt-param" ),
 							                                                                      "data-olt-rfield" => null,
 							                                                                      "data-olt-param"  => null,
+							                                                                      "data-required"   => true,
 							                                                                      "data-type"       => "input",
 							                                                                      "value"           => $operationalized_behaviour[ 'label' ] )
 							);
@@ -84,7 +85,7 @@ $controls_array = array( "buttons" => array( array( "action"  => "refresh",
 							                                                                                       "olt-param" ),
 							                                                           "data-olt-rfield" => true,
 							                                                           "data-olt-param"  => true,
-							                                                           "data-requierd"   => true,
+							                                                           "data-required"   => true,
 							                                                           "data-type"       => "textarea",
 							                                                           "value"           => $operationalized_behaviour[ 'description' ] )
 							);

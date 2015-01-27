@@ -55,7 +55,7 @@ $controls_array = array( "buttons" => array( array( "action"  => "refresh",
 			                                                           "class"           => array( "olt-rfield", "olt-param" ),
 			                                                           "data-olt-rfield" => true,
 			                                                           "data-olt-param"  => true,
-			                                                           "data-requierd"   => true,
+			                                                           "data-required"   => true,
 			                                                           "data-type"       => "textarea",
 			                                                           "value" => $rset['data']['response']['describing_behaviour']['behaviour_description'])
 			);

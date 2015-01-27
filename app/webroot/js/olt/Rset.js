@@ -12,7 +12,6 @@
   * @constructor
   */
 
-
 Rset = function (id) {
 	// properties
 	this.id = id;
@@ -49,7 +48,7 @@ Rset = function (id) {
 
 	/**
 	 * __setValue Private Method
-	 * @param obj
+	 * @param dataStore Which main data set to write to (either Rset.params or Rset.response).
 	 * @param path
 	 * @param value
 	 * @param createKeys
@@ -57,7 +56,7 @@ Rset = function (id) {
 	 * @returns {boolean}
 	 * @private
 	 */
-	this.__setValue = function(obj, path, value, createKeys, overwriteKeys) {
+	this.__setValue = function(dataStore, path, value, createKeys, overwriteKeys) {
 		createKeys = createKeys === true;
 		overwriteKeys = overwriteKeys === true;
 		var pathParts = typeof(path) === "string" ? splitPath(path, DS) : path;
@@ -69,31 +68,66 @@ Rset = function (id) {
 		var nextPathElement = pathParts.pop();
 
 		// check for paths to a non-existent location that overwrites an extant, non-object index
-		if (typeof(obj[nextPathElement]) != "object" && pathParts.length != 0) {
+		if (typeof(dataStore[nextPathElement]) != "object" && pathParts.length != 0) {
 			if ( (!overwriteKeys || !createKeys) ) {
 				throw new Error("Rset not writeable at provided path; either of createKeys or overwriteKeys was false.");
 			} else {
-				obj[nextPathElement] = {};
+				dataStore[nextPathElement] = {};
 			}
 		}
 
 		if (pathParts.length == 0) { //last element of the path; now safe to set;
-			obj[nextPathElement] = value;
+			dataStore[nextPathElement] = value;
 			return true;
 		} else {
-			if (!(nextPathElement in obj) ) {
+			if (!(nextPathElement in dataStore) ) {
 			 if (!createKeys) {
 				throw new Error("No key found in rset at provided path: [" + nextPathElement + "].");
 			 } else {
-				 obj[nextPathElement] = {};
+				 dataStore[nextPathElement] = {};
 			 }
 			}
-			var remainingObj = obj[nextPathElement];
+			var remainingObj = dataStore[nextPathElement];
 			this.__setValue(remainingObj, pathParts, value, createKeys, overwriteKeys);
 		}
 
 		return true;
 	};
+
+	/**
+	 * __getValue Private Method
+	 * @param dataStore Which main data set to read from (either Rset.params or Rset.response).
+	 * @param path
+	 * @returns {*}
+	 * @private
+	 */
+	this.__getValue = function(dataStore, path) {
+		var result = NOT_FOUND;
+		var pathParts = typeof(path) === "string" ? splitPath(path, DS) : path;
+
+		if (typeof(pathParts) != "object") { // 3 = minimum depth to reach a valid field in any rset scheme
+			throw new Error("Could not create rset representation: path either incorrectly formatted or incomplete.");
+		}
+		var nextPathElement = pathParts.pop();
+
+		if (pathParts.length == 0) { //last element of the path; target found;
+			if (!nextPathElement in dataStore) {
+				result = NOT_FOUND;
+			} else {
+				result = dataStore[nextPathElement];
+			}
+		} else {
+			if (!(nextPathElement in dataStore) ) {
+				result = NOT_FOUND
+			} else {
+				var remainingObj = dataStore[nextPathElement];
+				result = this.__getValue(remainingObj, pathParts);
+			}
+		}
+
+		return result;
+	};
+
 
 
 	/**
@@ -128,7 +162,10 @@ Rset = function (id) {
 	 * @returns {*}
 	 */
 	this.read = function(path) {
-		return this.__navigate(path,'read', null)
+		path = typeof(path) === "string" ? splitPath(path, DS) : path;
+		var pathRev = path.slice(1).reverse();
+		var readFrom = path[0] === "params" ? this.params : this.response;
+		return this.__getValue(readFrom, pathRev);
 	};
 
 
@@ -136,8 +173,9 @@ Rset = function (id) {
 	 * save Method
 	 *
 	 * @desc Updates current rset data on server to reflect current state of Rset object
-	 * @param path
-	 * @param value
+	 * @param postData
+	 * @param createKeys
+	 * @param createAfterDepth
 	 * @returns {boolean}
 	 */
 	this.save = function(postData, createKeys, createAfterDepth) {

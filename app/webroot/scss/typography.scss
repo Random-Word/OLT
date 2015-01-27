@@ -4,6 +4,8 @@ $header-anchor-color-hover:$secondary-color;
 $header-anchor-color-active:$grey-6;
 $header-anchor-color-disabled:$grey-6;
 
+$lab-nav-font-size: rem-calc(28px);
+
 .h1-sized {
   font-size:$h1-font-size;
   .diminished { font-size:$h1-font-size * $diminished-text-scale-factor; }

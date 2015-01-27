@@ -49,7 +49,7 @@
 					},
 					"students_shopping": {
 						"value": "students_shopping",
-						"string": "Student Shopping.",
+						"string": "Student Shopping",
 						"example_string": "No sound",
 						"operational_definitions": [
 						{

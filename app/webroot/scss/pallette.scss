@@ -31,6 +31,7 @@ $grey-6: rgb(125,125,125);
 $grey-7: rgb(100,100,100);
 $grey-8: rgb(75,75,75);
 $grey-9: rgb(50,50,50);
+$grey-9-5: rgb(40,40,40);
 $grey-10: rgb(25,25,25);
 $light-grey: rgb(242, 242, 242);
 $dark-grey: rgb(42,42,42);
@@ -118,3 +119,11 @@ $panel-background-color: $rgba-complement-0;
 $slide-title-background-color: #0E7BF5;
 $slide-instructions-background-color:$grey-8;
 
+// element colors
+$olt-triangle-color : $palette-secondary-color;
+$olt-triangle-hover-color : $light-muted-secondary-color;
+$olt-triangle-active-color : $dark-muted-secondary-color;
+$olt-triangle-disabled-color : $light-muted-secondary-color;
+
+// CONTINGENT COLORS
+$secondary-background-disabled-color:lighten($primary-background-color,10%);

@@ -58,14 +58,13 @@ div.olt-datasheet {
     background-image    : url("../img/arrow_label.41x149.png");
     background-repeat   : no-repeat;
     background-position : left;
-    background-size     : contain;
+    background-size     : auto 100%;
     color               : $white;
     &.small-6.columns { background-image    : url("../img/arrow_label.41x241.png"); }
     &.small-4.columns { background-image    : url("../img/arrow_label.41x241.png"); }
   }
 
   &.compact {
-
     dl.h3-sized, dl.h4-sized, dl.h5-sized {
       dt, dd {
         @include pad(10, 0, 10, 0, 10);
@@ -79,7 +78,7 @@ div.olt-datasheet {
       &.small-2.columns { background-image : url("../img/arrow_label.46x38.png"); }
       &.small-3.columns { background-image : url("../img/arrow_label.41x141.png"); }
       &.small-4.columns { background-image : url("../img/arrow_label.41x180.png"); }
-      span.diminished.subheader { color: $grey-2;}
+      span.diminished.subheader { color: $grey-8;}
     }
     dt.descriptor, dd.value { border-bottom:1px dotted $grey-8;}
   }
@@ -145,10 +144,6 @@ div.olt-datasheet {
 }
 
 
-$olt-triangle-color : $secondary-color;
-$olt-triangle-hover-color : $light-muted-secondary-color;
-$olt-triangle-active-color : $dark-muted-secondary-color;
-$olt-triangle-disabled-color : $light-muted-secondary-color;
 .olt-triangle {
   width        : 0;
   height       : 0;
@@ -210,9 +205,6 @@ $olt-triangle-disabled-color : $light-muted-secondary-color;
 
 }
 
-
-
-
 #developer-output {
   top: 10px;
   left: 10px;
@@ -250,10 +242,6 @@ $olt-triangle-disabled-color : $light-muted-secondary-color;
     font-size: 18px !important;
     text-align: center !important; }
 }
-
-
-
-
 
 .olt-radio {
   margin: 1rem !important;

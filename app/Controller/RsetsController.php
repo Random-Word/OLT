@@ -293,6 +293,24 @@ class RsetsController extends AppController {
 		return $this->redirect( array( 'action' => 'index' ) );
 	}
 
+	public function finalize($id) {
+		if ($this->Session->read("Auth.User.id") ) {
+			if ($this->Rset->exists($id) ) {
+				$this->Rset->id = $id;
+				if ($this->Rset->saveField("completed", true, false) ) {
+					if ($this->Rset->saveField("completedOn", date('Y-m-d H:i:s'), false)) {
+						$this->Session->setFlash("Congratulations, your lab has been finalized and saved. All done!");
+					}
+					else {
+						$this->Session->setFlash("Hrmm... Something went wrong finalizing your lab. Your answers have been saved, but you should contact an educator or lab administrator about this.");
+					}
+				} else {
+					$this->Session->setFlash("Hrmm... Something went wrong finalizing your lab. Your answers have been saved, but you should contact an educator or lab administrator about this.");
+				}
+				$this->redirect(___cakeUrl("users", "home"));
+			}
+		}
+	}
 
 	public function create($userId, $labId) {
 		$this->autorender = false;

@@ -97,31 +97,6 @@ echo $this->Form->create( false, array( "id" => $form_id, "action" => false, "cl
 													behaviours is not research</label></div>
 											</div>
 										</fieldset>
-			<!--					--><?php
-			//					$options = array("a. Operational definitions are essential to ensure good inter-rater reliability.",
-			//					                 "b. Operational definitions allow abstract concepts, like fear or happiness, to be measured.",
-			//					                 "c. Operational definitions work well when measuring animal behaviour, but are not applicable to human behaviour.",
-			//					                 "d. Operational definitions explain to others what exactly it is that you are measuring.",
-			//					                 "e. Operational definitions help to ensure that others will understand what it is that you measured in your study.");
-			//					echo $this->Form->radio( "Research Design Question", $options, array(
-			//					                                                                    "separator" => "<br />",
-			//					                                                                    "div" => array("id" => "TEST"),
-			//					                                                                "id"              => AppController::str_to_selector( array( $slide[ 'name' ],
-			//					                                                                                                                            "post_activity" )
-			//					                                                                    ),
-			//					                                                                "name"            => AppController::cakeforms_name( array( "response",
-			//					                                                                                                                           "post_activity",
-			//					                                                                                                                           "research_design" )
-			//					                                                                    ),
-			//					                                                                "label"           => "Research Design",
-			//					                                                                "class"           => array( "olt-rfield",
-			//					                                                                                            "olt-param", "olt-radio" ),
-			//					                                                                "data-olt-rfield" => null,
-			//					                                                                "data-olt-param"  => null,
-			//					                                                                "data-type"       => "input",
-			//					                                                                )
-			//					);?>
-
 
 					<?php echo $this->Element( "lab_ui" . DS . "save_button", array( "target" => $form_id, "class" => null,
 					                                                           "text"   => null, "data" => null )
@@ -207,32 +182,6 @@ echo $this->Form->create( false, array( "id" => $form_id, "action" => false, "cl
 													?>
 							</div>
 						</div>
-<!--						--><?php
-//						$options = array("a. Because there was an independent and a dependent variable",
-//						                 "b. Because we manipulated variables in order to measure behaviour",
-//						                 "c. Because we did not manipulate the variables we only observed behaviour",
-//						                 "d. Because we analyzed the relationship between two variables",
-//						                 "e. Because we assigned participants into groups");
-//
-//						echo $this->Form->radio( "Research Design Question", $options, array(
-//						                                                                    "separator" => "<br />",
-//						                                                                "id"              => AppController::str_to_selector( array( $slide[ 'name' ],
-//						                                                                                                                            "post_activity" )
-//						                                                                    ),
-//						                                                                "name"            => AppController::cakeforms_name( array( "response",
-//						                                                                					                                                                                                                           "post_activity",
-//						                                                                					                                                                                                                           "research_design_reflection" )
-//						                                                                					                                                                    ),
-//						                                                                "label"           => "Research Design",
-//						                                                                "class"           => array( "olt-rfield",
-//						                                                                                            "olt-param" ),
-//						                                                                "data-olt-rfield" => null,
-//						                                                                "data-olt-param"  => null,
-//						                                                                "data-type"       => "input",
-//						                                                                )
-//						);?>
-
-
 
 			<?php       break;
 	case "operational_definitions_knowledge":
@@ -314,27 +263,6 @@ echo $this->Form->create( false, array( "id" => $form_id, "action" => false, "cl
 												                                                           "text"   => null, "data" => null )
 												);
 												?>
-					<?php
-		//			$options = array("a. Descriptive", "b. Correlational", "c. Experimental", "d. Pseudo-experimental", "e. Tallying behaviours is not research");
-		//			echo $this->Form->radio( "Research Design Question", $options, array(
-		//			                                                                    "separator" => "<br />",
-		//			                                                                "id"              => AppController::str_to_selector( array( $slide[ 'name' ],
-		//			                                                                                                                            "post_activity" )
-		//			                                                                    ),
-		//			                                                                "name"            => AppController::cakeforms_name( array( "response",
-		//			                                                                                                                           "post_activity",
-		//			                                                                                                                           "research_design" )
-		//			                                                                    ),
-		//			                                                                "label"           => "Research Design",
-		//			                                                                "class"           => array( "olt-rfield",
-		//			                                                                                            "olt-param" ),
-		//			                                                                "data-olt-rfield" => null,
-		//			                                                                "data-olt-param"  => null,
-		//			                                                                "data-type"       => "input",
-		//			                                                                )
-		//			);?>
-
-
 						</div>
 					</div>
 
@@ -349,17 +277,7 @@ echo $this->Form->create( false, array( "id" => $form_id, "action" => false, "cl
 					<div class="row">
 						<div class="small-12 columns">
 							<p>That's it, you're all finished. You're free to visit pages you've already completed to review or change your answers if you like. Then, when you are sure you're ready, press <kbd>complete</kbd> below to finalize your answers and complete the Ethogram Lab. Congratulations!</p>
-                          <h1 class="huge button expand lab-finalize-button">Finalize & Submit</h1>
-<?php //echo $this->Element( "lab_ui" . DS . "save_button", array( "target" => $form_id,
-//							                                                                 "class"  => null,
-//																		                     "text"   => "Complete",
-//																		                     "target" => "ethogram-complete-form",
-//																		                     "data" => array("finalize" => true )
-//																		));
-//							echo $this->Form->create(false, array("id" => "ethogram-complete-form"));
-//							echo $this->Form->input('', array('type' => 'hidden', 'name' => ___cfName(array("ethogram-lab","finalize","rset")), "value" => $rset['id']));
-//							echo $this->Form->end();
-//							?>
+                          <h1 class="huge button expand lab-finalize-button" data-finalize>Finalize & Submit</h1>
 						</div>
 					</div>
 <?php   break;

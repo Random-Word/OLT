@@ -12,9 +12,8 @@ $lab_title = "Ethogram";
 	<title><?php echo $title_for_layout; ?></title>
 	<?php   echo $this->Html->meta('icon');
 			echo $this->Html->css(array("http://fonts.googleapis.com/css?family=Oswald:400,700,300", "http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800",'http://fonts.googleapis.com/css?family=Droid+Sans+Mono','vendor/foundation-icons','vendor/jquery.ui','app') );
-			echo $this->Html->script(array('http://kleinlab.psychology.dal.ca/libraries/jon/js/handy.js', "vendor/md5.js"));
 			echo $this->Html->script('vendor/modernizr');
-			echo $this->Html->script(array('vendor/jquery','vendor/jquery.ui','vendor/jquery.cookie','vendor/snap.svg.min','vendor/placeholder','vendor/fastclick'), array('block' => 'jquery'));
+			echo $this->Html->script(array('vendor/jquery','vendor/jquery.ui','vendor/jquery.cookie',"vendor/md5.js",'vendor/snap.svg.min','vendor/placeholder','vendor/fastclick'), array('block' => 'jquery'));
 			echo $this->Html->script(array('vendor/foundation.min'), array('block' => 'foundation'));
 			echo $this->Html->script( array("utilities",
 			                                "olt".DS."Rset",
@@ -31,7 +30,7 @@ $lab_title = "Ethogram";
 </head>
 <body data-layout="lab" data-rset-id="<?php echo $rset['id'];?>">
 <!-- ***[HEADER]*** -->
-<div class="masthead show-for-xlarge-up">
+<div class="masthead">
 	<h1 class="masthead xlg">OnlineLabTool</h1> <h4 class="subheader"><?php echo $lab_title;?> Lab</h4>
 </div>
 
@@ -41,7 +40,9 @@ $lab_title = "Ethogram";
 	</div>
 	<?php echo $this->Element("layout/user_panel"); ?>
 </div>
+
 <div class="show-for-medium-up">
+	<?php echo $this->element("nav", array("sections" => $sections, "options" => $nav));?>
 	<div id="content-wrapper"  class="">
 		<div id="content" class="hide">
 			<?php echo $this->Element("layout/flash", array("message" => $this->Session->flash()));?>

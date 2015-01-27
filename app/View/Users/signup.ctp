@@ -16,8 +16,9 @@
 		echo $this->Form->input('username', array("label" => "Complete Dalhousie E-mail Address (ie. xxx@dal.ca)"));
 		echo $this->Form->input('first_name');
 		echo $this->Form->input('last_name');
-		echo $this->Form->input('password');
-		echo $this->Form->input('student_number');
+		echo $this->Form->input('password', array('label' => 'Password <span class="diminished">(Note: you are <em>not</em> required to use the password associated with your NetID. Choose any password you can remember.)</span>'));?>
+
+	<?php echo $this->Form->input('student_number');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

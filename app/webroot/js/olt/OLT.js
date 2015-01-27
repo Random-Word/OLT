@@ -10,11 +10,12 @@ if (typeof MINS === 'undefined') {
 if (typeof HRS === 'undefined') {
 	const HRS = "hours"
 }
-
 if (typeof SVG === 'undefined') {
 	const SVG = '.svg';
 }
-
+if (typeof NOT_FOUND === 'undefined') {
+	const NOT_FOUND = "NOT_FOUND"
+}
 // todo: create keyboard shortcuts (library already downloaded, jQuery.hotKeys, and it's from John Resig whose name you seem to know...
 // todo: create custom error classes that can fire events/have listeners in order to simulate a raise() call (http://www.nczonline.net/blog/2009/03/03/the-art-of-throwing-javascript-errors/)
 var OLT = {
@@ -24,6 +25,11 @@ var OLT = {
 					$(this).addClass('active');
 			});
 		}
+
+		if ( $(".tutorial-window").length > 0) {
+			OLT.fn.tutorial.init();
+		}
+
 		if (window.local) OLT.local = window.local;
 
 		OLT.layout = layout; // literally, the name of the rendered cakephp layout
@@ -98,19 +104,24 @@ var OLT = {
 			}
 		},
 		layout: {
-			flashMessageSelector:"#flash-content"
+			slideNavInit: false,
+			flashContentSelector:"#flash-content-container",
+			flashMessageSelector:"#flash-content",
+			flashWidth:600
 		},
 		rUI: {
 			baseSelector: ".olt-rui",
 			field: ".olt-rfield"
 		},
+		requiredFieldSelector: "form *[data-required]",
 		pagevarSelector: ".pagevar.menu",
 		pagevarOptionSelector: "li[data-pagevar-opt]",
 		paramOptionSelector: ".olt-param.olt-option",
 		navFormSelector: "#LabNavForm",
 		navTargetSelector: "#LabNavTarget",
 		navRequestSelector: "#LabNavRequest",
-		navClass: ".pagenav",
+		navClass: ".pagenav.enabled",
+		labFinalizeSelector: ".lab-finalize-button",
 		labFooter: "#footer.labnav",
 		contentSelector: "#content",
 		slideSectionSelector: "section.slide-section",
@@ -141,6 +152,99 @@ var OLT = {
 		ticket: {}
 	},
 	fn: {
+		tutorial: {
+			current:0,
+			steps: [],
+			init: function() {
+				$(".tutorial-window").each(function() {
+					var data = $(this).data();
+					var tutorialOb = {
+						element:this,
+						top: null,
+						left: null
+					};
+					var twWidth = 300;
+					var twPadding = "2rem";
+
+					if (data.id == "TUTORIAL_START" || data.id == "TUTORIAL_END") {
+						tutorialOb.left = (window.outerWidth - twWidth) / 2;
+						tutorialOb.top = 300;
+						tutorialOb.bottom = false;
+
+					} else {
+						var id = asId(data.id);
+						var anchorPos = $(id).offset();
+						var anchorWidth = $(id).outerWidth();
+						var anchorHeight = $(id).outerHeight();
+						var horizontalPadding = 16;
+						var verticalPadding = 16;
+						tutorialOb.left = anchorPos.left + horizontalPadding;
+						tutorialOb.top = anchorPos.top + verticalPadding;
+						switch (data.register) {
+							// todo: implement other registrations (ie. those not needed in demo lab)
+							case "top":
+								tutorialOb.left -= anchorPos.left / 2;
+								tutorialOb.top = false;
+								tutorialOb.bottom = anchorHeight;
+								break;
+							case "top-right":
+								tutorialOb.left += anchorWidth;
+								tutorialOb.top = false;
+								tutorialOb.bottom = anchorHeight + verticalPadding;
+								break;
+							case "right":
+								tutorialOb.left += anchorWidth;
+								tutorialOb.top -= (anchorHeight / 2 ) + verticalPadding;
+								break;
+							case "bottom-left":
+								tutorialOb.left -= twWidth + horizontalPadding;
+								tutorialOb.top -= anchorHeight + verticalPadding;
+								break;
+						}
+					}
+					$(tutorialOb.element).on("click", OLT.fn.tutorial.advance);
+					OLT.fn.tutorial.steps.push(tutorialOb);
+				});
+				OLT.fn.tutorial.advance()
+			},
+			advance: function() {
+				var current = OLT.fn.tutorial.current;
+				var last = current - 1;
+				if (last >= 0) {
+					var lastStep = OLT.fn.tutorial.steps[last];
+					$(lastStep.element).fadeOut(150);
+				}
+				var step = OLT.fn.tutorial.steps[current];
+				var height = 0;
+				$(step.element).css({position:"fixed", left:-9999}).show( function() {
+					var content = $(step.element).children(".joyride-content-wrapper")[0];
+					height = $(content).innerHeight();
+					$(step.element).hide();
+				});
+				if (step.top != false) {
+					$(step.element).addClass("tutorial-tip-guide").css({
+						top:step.top,
+						height:height,
+						left:step.left,
+						position:"fixed",
+						zIndex:99999
+					}).fadeIn(300);
+				} else {
+//					pr($(content).innerHeight());
+					$(step.element).addClass("tutorial-tip-guide").css({
+						bottom:step.bottom,
+						height:height,
+						left:step.left,
+						position:"fixed",
+						zIndex:99999
+					}).fadeIn(300);
+				}
+				OLT.fn.tutorial.current++;
+			},
+			complete: function() {
+			}
+
+		},
 		/**
 		 * flash Method
 		 *
@@ -157,9 +261,10 @@ var OLT = {
 		flash: function (message, type) {
 			if (arguments.length == 0) {
 				$(OLT.cfg.layout.flashMessageSelector).html('');
+				$(OLT.cfg.layout.flashContentSelector).fadeOut();
 				return true;
 			}
-			if (arguments.length >= 1) {
+			if (arguments.length == 1) {
 				message = arguments[0];
 				type = "message"
 			}
@@ -168,7 +273,8 @@ var OLT = {
 			}
 			//todo: provide some interface for controlling presentation of message
 
-			$(OLT.cfg.layout.flashMessageSelector).html(message).fadeToggle();
+			$(OLT.cfg.layout.flashMessageSelector).html(message);
+			$(OLT.cfg.layout.flashContentSelector).fadeIn();
 			return true;
 		},
 
@@ -245,15 +351,37 @@ var OLT = {
 		 * @returns {boolean}
 		 */
 		navigate: function () {
-			pr(this);
+
 			var target = $(this).data("target");
 			var request = $(this).data("request");
-			$(OLT.cfg.navRequestSelector).val(request);
-			$(OLT.cfg.navTargetSelector).val(target);
-			$(OLT.cfg.navFormSelector).submit();
+			var executeNav = request == "next" ? OLT.fn.checkAdvacementReqs() : true;
+			if (executeNav) {
+				$(OLT.cfg.navRequestSelector).val(request);
+				$(OLT.cfg.navTargetSelector).val(target);
+				$(OLT.cfg.navFormSelector).submit();
+			}
 
 			return true;
 		},
+		checkAdvacementReqs: function() {
+			debug = true;
+			var complete = true;
+			OLT.data.rset.refresh();
+			$(OLT.cfg.requiredFieldSelector).each(function() {
+				var name = $(this).attr("name");
+				if (debug) pr(name, "checkAdvancementReqs: name");
+				if (!OLT.fn.rUI.isSet(name, true)) complete = false
+			});
+
+			if (!complete) {
+				OLT.fn.flash("You must complete this slide before advancing.");
+				return false;
+			} else {
+				OLT.fn.flash();
+				return true;
+			}
+		},
+
 
 /*******************************************************************************************************************************
 																														  LAYOUT
@@ -262,7 +390,6 @@ var OLT = {
 
 			init: function() {
 				var sections = function() {
-						//
 						$(OLT.cfg.slideSectionSelector).each( function() {
 							if ( $(this).innerHeight() < window.innerHeight ) {
 								$(this).css('height', window.innerHeight);
@@ -319,10 +446,29 @@ var OLT = {
 					});
 					};
 
+				var nav = function() {
+						$("#reveal-slide-nav button").on("click", function() {
+								$(this).toggleClass("revealed");
+								$("aside#nav").toggleClass("revealed");
+						});
+
+					return true;
+				};
+
+				var flash = function() {
+					$(OLT.cfg.layout.flashContentSelector).css({
+						top:0.25 * window.outerHeight,
+						left:(window.outerWidth - OLT.cfg.layout.flashWidth)/2
+					});
+					return true;
+				};
+
 				var sitRep = {
 					sections: sections(),
 					expandedButtonGroups: expandedButtonGroups(),
-					actionables: actionables()
+					actionables: actionables(),
+					nav: nav(),
+					flash: flash()
 				};
 				for (key in sitRep.keys) {
 					if (key !== true) {
@@ -334,11 +480,15 @@ var OLT = {
 			},
 
 			hide: function(target_id, method) {
+				var scrollPos = null;
 				if (isEvent(arguments[0]) ) {
 					var e = arguments[0];
 					target_id = e.data.target_id;
 					method = e.data.method;
 				}
+				pr(target_id);
+				pr(OLT.cfg.layout.flashContentSelector);
+				if (target_id == OLT.cfg.layout.flashContentSelector) scrollPos = $(window).scrollTop();
 				if (!method) {
 					$(asId(target_id)).hide();
 				} else {
@@ -348,6 +498,12 @@ var OLT = {
 							break;
 					}
 				}
+				if (scrollPos) $(window).scrollTop(scrollPos);
+			},
+
+			hideFlash: function() {
+				$(OLT.cfg.layout.flashContentSelector).fadeOut();
+				$(OLT.cfg.layout.flashMessageSelector).html('');
 			},
 
 
@@ -399,6 +555,19 @@ var OLT = {
 					//OLT.fn.util.refreshTwins(OLT.data.twins[key]);
 				}
 				return true;
+			},
+			updateNavScroll: function(sectionId) {
+				if (isEvent(arguments[0])) {
+					var e = arguments[0];
+					sectionId = asId(e.data.sectionId);
+				}
+				var navSelector = "#slide-nav-content li[data-scroll-to='#"+sectionId+"']";
+				if ( $(asId(sectionId)).scrollTop()>=$(navSelector).position().top) {
+					$("#slide-nav-content li").each(function() {
+						$(this).removeClass('active');
+					});
+					$(asId(sectionId)).addClass('active');
+			    }
 			}
 		},
 /*******************************************************************************************************************************
@@ -473,6 +642,16 @@ var OLT = {
 			 * @returns {boolean}
 			 */
 			pageNav: function () {
+				$("#slide-nav-toggle").on("click", function() {
+						$("#slide-nav-hidden-switch").trigger("click");
+						if ($(this).hasClass("open")) {
+							$(this).animate({left:"0px"}, 300, "linear").removeClass("open");
+						} else {
+							$(this).animate({left:"250px"}, 300, "linear").addClass("open");
+						}
+
+				});
+
 				if (OLT.layout != "lab") return true;
 				$(OLT.cfg.navClass).on("click", null, OLT.fn.navigate);
 				$(OLT.cfg.slideNavAnchorSelector).on("click", function() {
@@ -483,6 +662,7 @@ var OLT = {
 					var target = $(this).data('scrollTo');
 						$('html,body').animate({scrollTop: $(target).offset().top},500, "easeOutCubic");
 				});
+				$(OLT.cfg.labFinalizeSelector).on("click", OLT.fn.rUI.finalize);
 
 				$('html,body').animate({scrollTop: $("#slide-title_section").offset().top},300, "easeOutCubic");
 				return true
@@ -682,6 +862,20 @@ var OLT = {
 																															 RUI
 *******************************************************************************************************************************/
 		rUI: {
+			finalize: function() {
+				var debug = false;
+				window.location = cakeUrl("rsets", "finalize", OLT.data.rset.id);
+			},
+
+			isSet: function(path, formCased) {
+				var debug = false;
+				var pathLen = path.length - 1;
+				if (formCased) path = path.substring(5,pathLen).replace(/\]\[/g,"/");
+				if (debug) pr( path, "rUI.isSet: path, after formCase check");
+				var fieldVal = OLT.data.rset.read(path);
+				if (debug) pr( fieldVal, "rUI.isSet: fieldVal after Rset.read()");
+				return !(!fieldVal || fieldVal == NOT_FOUND);
+			},
 
 			/**
 			 * updateCounter method
@@ -824,7 +1018,7 @@ var OLT = {
 							// if save element was part of a paramgroup, apply appropriate class
 							if (sourceData.paramGroup != "undefined") {
 								var setClass = sourceData.setClass ? sourceData.setClass : "active";
-								$("*[data-param-group='" + sourceData.paramGroup +"'").each(function() {
+								$("*[data-param-group='" + sourceData.paramGroup +"']").each(function() {
 									$(this).removeClass(setClass);
 								});
 								$(sourceElement).addClass(setClass);
@@ -850,8 +1044,6 @@ var OLT = {
 																															UTIL
 *******************************************************************************************************************************/
 		util: {
-
-
 			/**
 			 * setPagevar method
 			 * @param {str} pagevar

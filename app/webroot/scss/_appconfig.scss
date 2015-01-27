@@ -22,7 +22,9 @@ $diminished-text-scale-factor: 0.75; // %
 // HEADER
 $header-font-size: rem-calc(1.25 * $base-font-size-scalar);
 
-
+// SLIDE NAV
+$slide-nav-width: 250px;
+$slide-nav-width-condensed: 1.5rem;
 
 // FOOTER
 $footer-height:rem-calc(80px);
@@ -224,4 +226,40 @@ $footer-padding-top:rem-calc(20px);
   $left: rem-calc(nth(nth($compiledValues,4),1));
   padding: $top $right $bottom $left;
 
+}
+
+@mixin triangle($rotation, $base, $height, $color:rgb(0,0,0), $slope:45deg) {
+  //todo: eventually incorporate slope, probably by assuming height = slope if expressed in degress vs px/em/rem
+  $left-facing:("left", "west", 270deg, 270, -90deg, -90);
+  $right-facing:("right","east",90deg, 90);
+  $up-facing:("up","top","north",0deg, 0);
+  $down-facing:("down","bottom","south", 180deg,180);
+
+  @if index($left-facing, $rotation) {
+    border-width: $height $base $height 0;
+    border-color: transparent $color transparent transparent;
+  }
+  @else if index($right-facing, $rotation) {
+    border-width: $height 0 $height $base;
+    border-color: transparent transparent transparent $color;
+  }
+  @else if index($up-facing, $rotation) {
+    border-width: 0 $height $base $height;
+    border-color: transparent transparent $color transparent;
+  }
+  @else if index($down-facing, $rotation) {
+    border-width: $base $height $height 0;
+    border-color: $color transparent transparent transparent;
+  }
+  @else {
+    border-width: 0 $height $base $height;
+    border-color: transparent transparent $color transparent;
+    transform: rotate($rotation * 1deg);
+  }
+
+  height: 0;
+  width: 0;
+  margin:0;
+  display:inline-block;
+  border-style:solid;
 }

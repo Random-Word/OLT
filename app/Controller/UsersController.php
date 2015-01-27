@@ -166,24 +166,24 @@ class UsersController extends AppController {
 
 	public function beforeFilter() {
 	    parent::beforeFilter();
-		$this->Auth->allow(array("signup","initDB"));
+		$this->Auth->allow(array("signup"));
 	}
 
 	public function initDB() {
 	    $group = $this->User->Group;
 
 	    // Allow admins to everything
-	    $group->id = 4;
+	    $group->id = 1;
 	    $this->Acl->allow($group, 'controllers');
 
 	    // allow managers to posts and widgets
-	    $group->id = 5;
+	    $group->id = 2;
 	    $this->Acl->deny($group, 'controllers');
 	    $this->Acl->allow($group, 'controllers/Labs');
 	    $this->Acl->allow($group, 'controllers/Rsets');
 
 	    // allow users to only add and edit on posts and widgets
-	    $group->id = 6;
+	    $group->id = 3;
 	    $this->Acl->deny($group, 'controllers');
 	    $this->Acl->allow($group, 'controllers/Users/home');
 	    $this->Acl->allow($group, 'controllers/Users/logout');
@@ -193,8 +193,9 @@ class UsersController extends AppController {
 	    // allow basic users to log out
 	    $this->Acl->allow($group, 'controllers/Rsets/create');
 	    $this->Acl->allow($group, 'controllers/Rsets/read');
-	    $this->Acl->allow($group, 'controllers/Rsets/save');
+	    $this->Acl->allow($group, 'controllers/Rsets/save_response');
 	    $this->Acl->allow($group, 'controllers/Rsets/live_update');
+	    $this->Acl->allow($group, 'controllers/Rsets/finalize');
 
 
 	    // we add an exit to avoid an ugly "missing views" error message

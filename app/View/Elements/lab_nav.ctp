@@ -12,14 +12,16 @@ $_options = array("next" => null,
 extract(array_merge($_options, $options));
 
 ?>
+<nav id="lab-nav">
 
-<div class="lab-nav">
+</nav>
+<?php if (2===4) {?>
+<div class="lab-nav show-for-smalls-only">
 	<div class="small-8 small-centered columns show-for-large-up">
 		<div class="small-4 large-4 columns text-left top-nav-section">
 			<?php if ($previous) {?>
 			<h3 id="backward-nav" data-request="previous" data-target="null" class="pagenav">
 				<a href="#" class="olt-triangle left-facing inherited-transition"></a> Previous
-
 	        </h3>
 			<?php } else { ?>
 				<div id="backward-nav-placeholder" class="slidenav-placeholder">&nbsp;</div>
@@ -49,7 +51,6 @@ extract(array_merge($_options, $options));
 				  echo $this->Form->end();
 			?>
 		</div>
-		<?php echo $this->element( "slide_nav", array( "sections" => $sections ) ); ?>
 	</div>
-
 </div>
+<?php }?>

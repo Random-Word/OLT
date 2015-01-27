@@ -31,10 +31,10 @@
 				<?php foreach($rsets as $rset) {?>
 					<li class="small-12 columns descriptor">
 						<h3 class="small-6 columns"><?php echo $rset['Lab']['name'];?></h3>
-						<div class="small-2 columns">&nbsp;</div>
+						<div class="small-2 columns text-center">&nbsp;</div>
 						<?php
 						if ($rset['Rset']['completed'])  {
-							echo "Completed on :".$rset['Rset']['completed_on'];
+							echo "<h5>Completed ".substr($rset['Rset']['modified'], 0,10)."</h5>";
 						} else {
 							echo $this->Html->link("Continue", ___cakeUrl("labs","run", $rset['Rset']['id']), array("class" => array("small-4 columns")));
 						}

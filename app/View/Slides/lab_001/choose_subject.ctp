@@ -60,16 +60,17 @@ echo $this->element( "layout/slide_title", array( "header"    => $slide[ 'title'
 								$rsubDatalistIds = array();
 								foreach ($rsubOptions as $rsub) {
 									if (!$research_subject) $research_subject = -1;
-									$classArray = array("h4-sized", $research_subject == $rsub['value'] ? "active" : "hidden");
+									$classArray = array("h4-sized", "expand", $research_subject == $rsub['value'] ? "active" : "hidden");
 									$rsubDatalistIds[$rsub['value']] = ___strToSel(array($slide['name'], $taskName, 'option', $rsub['value']));
 									?>
-							<dl id="<?php echo $rsubDatalistIds[$rsub['value']];?>" <?php echo ___cD($classArray);?>>
-							<?php foreach($rsub['operational_definitions'] as $od) {
-								?>
-								<dt class="small-4 columns descriptor"><?php echo $od['label'];?></dt>
-								<dd class="small-8 columns value"> <?php echo $od['description'];?></dd>
+							<table id="<?php echo $rsubDatalistIds[$rsub['value']];?>" <?php echo ___cD($classArray);?>>
+							<?php foreach($rsub['operational_definitions'] as $od) {?>
+								<tr>
+									<td class="small-4 columns descriptor"><h5><?php echo $od['label'];?></h5></td>
+									<td class="small-8 columns value"> <?php echo $od['description'];?></td>
+								</tr>
 								<?php } ?>
-							</dl>
+							</table>
 						<?php } ?>
 						</div>
 					</div>
@@ -109,7 +110,7 @@ echo $this->Form->end();
 			var target = $(e.target).data().write[0].value;
 			var stringVal = $(e.target).html();
 
-			$("div.olt-datasheet dl").each(function() {
+			$("div.olt-datasheet table").each(function() {
 				var id = $(this).attr('id');
 				var targetCompare = id.split("_")[3].replace("-","_");
 

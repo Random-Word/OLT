@@ -354,6 +354,26 @@ function strpad(padstr, pad_length, padchar, direction, decimal_to) {
 	}
 }
 
+function array_slice(arr, start, end) {
+	// convert start & end to absolute, positive indices
+	if (!end) end = arr.length - 1;
+	if (end < 0) end = arr.length - Math.abs(end);
+	if (start < 0) start = arr.length - Math.abs(end);
+
+	// check for impossible requests
+	if (!Array.isArray(arr)) throw new Error("array_slice() expects first argument to be array.");
+	if (arr.length < start) throw new Error("array_slice(): index out of range for argument 'start'.");
+	if (end > arr.length) throw new Error("array_slice(): index out of range for argument 'end'.");
+	if (start > end) throw new Error("array_slice(): argument 'start' points to index after 'end'");
+	pr([start,end,arr], "start,end,arr");
+	var return_array = [];
+	for (var i = start; i < arr.length; i++) {
+		pr([i, arr[i]], "i, arr[i]");
+		return_array.push(arr[i]);
+		pr(return_array);
+	}
+	return return_array.reverse();
+}
 
 /**
  * form-reset listener
